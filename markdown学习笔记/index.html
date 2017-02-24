@@ -1,0 +1,1138 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="markdown," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="markdown的目标是实现: 易读易写1、兼容html。A paragraph in HTML displayed as code
+
+1&amp;lt;p&amp;gt;A paragraph in &amp;lt;b&amp;gt;HTML&amp;lt;/b&amp;gt; displayed as code&amp;lt;/p&amp;gt;
+2、不在markdown涵盖范围之内的标签，都可以直接在文档里用html编写，不需要额外标注。3、html文件">
+<meta property="og:type" content="article">
+<meta property="og:title" content="markdown学习笔记">
+<meta property="og:url" content="http://zyoung.me/markdown学习笔记/index.html">
+<meta property="og:site_name" content="zyoung的小窝">
+<meta property="og:description" content="markdown的目标是实现: 易读易写1、兼容html。A paragraph in HTML displayed as code
+
+1&amp;lt;p&amp;gt;A paragraph in &amp;lt;b&amp;gt;HTML&amp;lt;/b&amp;gt; displayed as code&amp;lt;/p&amp;gt;
+2、不在markdown涵盖范围之内的标签，都可以直接在文档里用html编写，不需要额外标注。3、html文件">
+<meta property="og:image" content="http://iissnan.com/nexus/next/next-schemes.jpg">
+<meta property="og:image" content="http://zyoung.me/vedio/vedio_1.png">
+<meta property="og:updated_time" content="2017-02-24T07:39:06.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="markdown学习笔记">
+<meta name="twitter:description" content="markdown的目标是实现: 易读易写1、兼容html。A paragraph in HTML displayed as code
+
+1&amp;lt;p&amp;gt;A paragraph in &amp;lt;b&amp;gt;HTML&amp;lt;/b&amp;gt; displayed as code&amp;lt;/p&amp;gt;
+2、不在markdown涵盖范围之内的标签，都可以直接在文档里用html编写，不需要额外标注。3、html文件">
+<meta name="twitter:image" content="http://iissnan.com/nexus/next/next-schemes.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"hide"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://zyoung.me/markdown学习笔记/"/>
+
+
+
+
+
+  <title> markdown学习笔记 | zyoung的小窝 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">zyoung的小窝</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+    
+      <p class="site-subtitle">人人为我，我为人人</p>
+    
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://zyoung.me/markdown学习笔记/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Zhen ZhaoYang">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/default_avatar.jpg">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="zyoung的小窝">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="zyoung的小窝" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                markdown学习笔记
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-04-14T15:40:08+08:00">
+                2016-04-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/学习笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">学习笔记</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/markdown学习笔记/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="markdown学习笔记/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/markdown学习笔记/" class="leancloud_visitors" data-flag-title="markdown学习笔记">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="markdown的目标是实现-易读易写"><a href="#markdown的目标是实现-易读易写" class="headerlink" title="markdown的目标是实现: 易读易写"></a>markdown的目标是实现: 易读易写</h2><h4 id="1、兼容html。"><a href="#1、兼容html。" class="headerlink" title="1、兼容html。"></a><a name="html">1、兼容html。</a></h4><p>A paragraph in <b>HTML</b> displayed as code</p>
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>A paragraph in <span class="tag">&lt;<span class="name">b</span>&gt;</span>HTML<span class="tag">&lt;/<span class="name">b</span>&gt;</span> displayed as code<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div></pre></td></tr></table></figure>
+<h4 id="2、不在markdown涵盖范围之内的标签，都可以直接在文档里用html编写，不需要额外标注。"><a href="#2、不在markdown涵盖范围之内的标签，都可以直接在文档里用html编写，不需要额外标注。" class="headerlink" title="2、不在markdown涵盖范围之内的标签，都可以直接在文档里用html编写，不需要额外标注。"></a>2、不在markdown涵盖范围之内的标签，都可以直接在文档里用html编写，不需要额外标注。</h4><h4 id="3、html文件中，有两个字符需要特殊处理：-lt-amp-lt-和-amp-amp-amp-。-lt-用于起始标签，-amp-用于标记html实体。插入版权符号-copy-amp-copy"><a href="#3、html文件中，有两个字符需要特殊处理：-lt-amp-lt-和-amp-amp-amp-。-lt-用于起始标签，-amp-用于标记html实体。插入版权符号-copy-amp-copy" class="headerlink" title="3、html文件中，有两个字符需要特殊处理：&lt;&amp;lt;和&amp;&amp;amp;。&lt;用于起始标签，&amp;用于标记html实体。插入版权符号&copy;&amp;copy;"></a>3、html文件中，有两个字符需要特殊处理：&lt;<code>&amp;lt;</code>和&amp;<code>&amp;amp;</code>。&lt;用于起始标签，&amp;用于标记html实体。插入版权符号&copy;<code>&amp;copy;</code></h4><h4 id="4、段落的前后要有一个以上的空行，普通段落不需要空格或制表符来缩进。"><a href="#4、段落的前后要有一个以上的空行，普通段落不需要空格或制表符来缩进。" class="headerlink" title="4、段落的前后要有一个以上的空行，普通段落不需要空格或制表符来缩进。"></a>4、段落的前后要有一个以上的空行，普通段落不需要空格或制表符来缩进。</h4><a id="more"></a>
+<h4 id="5、支持两种标题的语法，类Setext和类atx形式。例如："><a href="#5、支持两种标题的语法，类Setext和类atx形式。例如：" class="headerlink" title="5、支持两种标题的语法，类Setext和类atx形式。例如："></a>5、支持两种标题的语法，类Setext和类atx形式。例如：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">This is an H1</div><div class="line">============</div><div class="line"></div><div class="line">This is an H2</div><div class="line">------------</div></pre></td></tr></table></figure>
+<p>任何数量的=和-都可以有效果。<br>也可以选择类Atx形式在行首插入1到6个#,对应1到6阶标题，例如:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"># 这是H1</div><div class="line">###### 这是H6</div></pre></td></tr></table></figure></p>
+<h4 id="6、区块引用Blockquotes，在段落前加上-gt-来标记区块引用。可以叠加嵌套，例"><a href="#6、区块引用Blockquotes，在段落前加上-gt-来标记区块引用。可以叠加嵌套，例" class="headerlink" title="6、区块引用Blockquotes，在段落前加上&gt;来标记区块引用。可以叠加嵌套，例"></a>6、区块引用Blockquotes，在段落前加上&gt;来标记区块引用。可以叠加嵌套，例</h4><blockquote>
+<h2 id="This-is-the-first-level-of-quoting"><a href="#This-is-the-first-level-of-quoting" class="headerlink" title="This is the first level of quoting."></a>This is the first level of quoting.</h2><blockquote>
+<p>This is nested blockquote.</p>
+</blockquote>
+<p>Back to the first level.</p>
+</blockquote>
+<h4 id="7、列表"><a href="#7、列表" class="headerlink" title="7、列表"></a>7、列表</h4><p>markdown支持无序和有序列表。无序列表使用星号、加号或减号作为列表标记<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">* Red</div><div class="line">* Green</div><div class="line">* Blue</div></pre></td></tr></table></figure></p>
+<p>有序表则使用数字接着一个英文句点:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">1. Bird</div><div class="line">2. Mchale</div><div class="line">3. Parish</div></pre></td></tr></table></figure></p>
+<p>列表项中可以包含多个段落，每个分类下的段落必须缩进4个空格或1个制表符<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">1.	This is a list item with two paragraphs. Lorem ipsum dolor sit </div><div class="line">   	amet,consiter adipiscing elit. A;iquam henderit mi posure lecture</div><div class="line">   	Greateful.</div><div class="line"></div><div class="line">   	Another paragraph</div><div class="line"></div><div class="line">2. 	Suspend id is what a good.</div><div class="line">3. 	Third item</div></pre></td></tr></table></figure></p>
+<h4 id="8、建立分割线。可以在一行中用三个以上的星号、减号、底线来建立分割线。也可以在星号和减号之间插入空格"><a href="#8、建立分割线。可以在一行中用三个以上的星号、减号、底线来建立分割线。也可以在星号和减号之间插入空格" class="headerlink" title="8、建立分割线。可以在一行中用三个以上的星号、减号、底线来建立分割线。也可以在星号和减号之间插入空格"></a>8、建立分割线。可以在一行中用三个以上的星号、减号、底线来建立分割线。也可以在星号和减号之间插入空格</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">***</div><div class="line">---</div><div class="line">* * *</div></pre></td></tr></table></figure>
+<h4 id="9、链接-tittle-url"><a href="#9、链接-tittle-url" class="headerlink" title="9、链接[tittle](url)"></a>9、链接<code>[tittle](url)</code></h4><p>markdown中文网站 <a href="http://www.markdown.cn" target="_blank" rel="external">markdown</a><br>markdown的VIM编辑器 <a href="https://github.com/plasticboy/vim-markdown" target="_blank" rel="external">vim-markdown</a></p>
+<h4 id="10、图片-title-imgUrl"><a href="#10、图片-title-imgUrl" class="headerlink" title="10、图片![title](imgUrl)"></a>10、图片<code>![title](imgUrl)</code></h4><p>This is an image <img src="http://iissnan.com/nexus/next/next-schemes.jpg" alt="IMG"></p>
+<hr>
+<h4 id="11、表格"><a href="#11、表格" class="headerlink" title="11、表格"></a>11、表格</h4><table>
+<thead>
+<tr>
+<th style="text-align:center">Colum1</th>
+<th style="text-align:center">Colum2</th>
+<th style="text-align:left">Colum3</th>
+<th style="text-align:right">Colum4</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">中对齐</td>
+<td style="text-align:center">中对齐</td>
+<td style="text-align:left">左对齐</td>
+<td style="text-align:right">右对齐</td>
+</tr>
+<tr>
+<td style="text-align:center">中对齐</td>
+<td style="text-align:center">好的好的</td>
+<td style="text-align:left">哈</td>
+<td style="text-align:right">简单介绍</td>
+</tr>
+<tr>
+<td style="text-align:center">中对齐</td>
+<td style="text-align:center">但是</td>
+<td style="text-align:left">动画</td>
+<td style="text-align:right">哈哈</td>
+</tr>
+</tbody>
+</table>
+<p>表格代码如下:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">|Colum1|Colum2  |Colum3 | Colum4  |</div><div class="line">|:----:|:----:  |:----- | -------:|</div><div class="line">|中对齐|中对齐  |左对齐 | 右对齐  |</div><div class="line">|中对齐|好的好的|哈     | 简单介绍|</div><div class="line">|中对齐|但是    |动画   | 哈哈    |</div></pre></td></tr></table></figure></p>
+<h4 id="12、锚点链接"><a href="#12、锚点链接" class="headerlink" title="12、锚点链接"></a>12、<a href="#html">锚点链接</a></h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">之前的第一条定义如下：</div><div class="line">&lt;a name=&quot;html&quot;&gt;1、兼容html。&lt;/a&gt;</div><div class="line">然后可以直接锚点跳转过去，使用方法如下:</div><div class="line">[锚点名称](#锚点名)</div></pre></td></tr></table></figure>
+<h4 id="13、视频链接"><a href="#13、视频链接" class="headerlink" title="13、视频链接"></a>13、视频链接</h4><p>其实就是插入视频截图然后将链接设置为视频的实际地址<code>[![vedio](/ios10/ios10_preview.png)](http://open.163.com/movie/2011/10/F/G/M7GF17HPS_M7GHGQTFG.html)</code><br><a href="http://open.163.com/movie/2011/10/F/G/M7GF17HPS_M7GHGQTFG.html" target="_blank" rel="external"><img src="/vedio/vedio_1.png" alt="vedio"></a></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>重在参与哈 ヾ(≧▽≦*)o</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/payment/pay_weixin.png" alt="Zhen ZhaoYang WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/payment/pay_alipay.png" alt="Zhen ZhaoYang Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/markdown/" rel="tag"># markdown</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/Hexo个人博客之搜索引擎推广/" rel="prev" title="Hexo个人博客之搜索引擎推广">
+                Hexo个人博客之搜索引擎推广 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+  <a class="jiathis_button_tsina"></a>
+  <a class="jiathis_button_tqq"></a>
+  <a class="jiathis_button_weixin"></a>
+  <a class="jiathis_button_cqq"></a>
+  <a class="jiathis_button_douban"></a>
+  <a class="jiathis_button_renren"></a>
+  <a class="jiathis_button_qzone"></a>
+  <a class="jiathis_button_kaixin001"></a>
+  <a class="jiathis_button_copy"></a>
+  <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+  <a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+  var jiathis_config={
+    hideMore:false
+  }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+      
+    </div>
+  </div>
+
+          
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="markdown学习笔记/"
+           data-title="markdown学习笔记" data-url="http://zyoung.me/markdown学习笔记/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/default_avatar.jpg"
+               alt="Zhen ZhaoYang" />
+          <p class="site-author-name" itemprop="name">Zhen ZhaoYang</p>
+          <p class="site-description motion-element" itemprop="description">个人技术博客，平常写写文章、吐吐槽</p>
+        </div>
+        <nav class="site-state motion-element">
+        
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">22</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">18</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/zzyhappyzzy" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              友情链接
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://xtutu.me/" title="土豪" target="_blank">土豪</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.aha-nstd.com/" title="毛毛" target="_blank">毛毛</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://www.objc.io/" title="OBJC" target="_blank">OBJC</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#markdown的目标是实现-易读易写"><span class="nav-number">1.</span> <span class="nav-text">markdown的目标是实现: 易读易写</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1、兼容html。"><span class="nav-number">1.0.1.</span> <span class="nav-text">1、兼容html。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2、不在markdown涵盖范围之内的标签，都可以直接在文档里用html编写，不需要额外标注。"><span class="nav-number">1.0.2.</span> <span class="nav-text">2、不在markdown涵盖范围之内的标签，都可以直接在文档里用html编写，不需要额外标注。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3、html文件中，有两个字符需要特殊处理：-lt-amp-lt-和-amp-amp-amp-。-lt-用于起始标签，-amp-用于标记html实体。插入版权符号-copy-amp-copy"><span class="nav-number">1.0.3.</span> <span class="nav-text">3、html文件中，有两个字符需要特殊处理：<&lt;和&&amp;。<用于起始标签，&用于标记html实体。插入版权符号©&copy;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4、段落的前后要有一个以上的空行，普通段落不需要空格或制表符来缩进。"><span class="nav-number">1.0.4.</span> <span class="nav-text">4、段落的前后要有一个以上的空行，普通段落不需要空格或制表符来缩进。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5、支持两种标题的语法，类Setext和类atx形式。例如："><span class="nav-number">1.0.5.</span> <span class="nav-text">5、支持两种标题的语法，类Setext和类atx形式。例如：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6、区块引用Blockquotes，在段落前加上-gt-来标记区块引用。可以叠加嵌套，例"><span class="nav-number">1.0.6.</span> <span class="nav-text">6、区块引用Blockquotes，在段落前加上>来标记区块引用。可以叠加嵌套，例</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#This-is-the-first-level-of-quoting"><span class="nav-number">2.</span> <span class="nav-text">This is the first level of quoting.</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#7、列表"><span class="nav-number">2.0.1.</span> <span class="nav-text">7、列表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8、建立分割线。可以在一行中用三个以上的星号、减号、底线来建立分割线。也可以在星号和减号之间插入空格"><span class="nav-number">2.0.2.</span> <span class="nav-text">8、建立分割线。可以在一行中用三个以上的星号、减号、底线来建立分割线。也可以在星号和减号之间插入空格</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9、链接-tittle-url"><span class="nav-number">2.0.3.</span> <span class="nav-text">9、链接[tittle](url)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#10、图片-title-imgUrl"><span class="nav-number">2.0.4.</span> <span class="nav-text">10、图片![title](imgUrl)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#11、表格"><span class="nav-number">2.0.5.</span> <span class="nav-text">11、表格</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#12、锚点链接"><span class="nav-number">2.0.6.</span> <span class="nav-text">12、锚点链接</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#13、视频链接"><span class="nav-number">2.0.7.</span> <span class="nav-text">13、视频链接</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+<div class="copyright" >
+  
+  &copy;  2016 - 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Zhen ZhaoYang</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="powered-by">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+<div class="theme-info">
+总访问量 -
+ <span id="busuanzi_value_site_pv"></span>
+</div>
+
+
+
+
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"zhenchyblog"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+      search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+      $('.popup').toggle();
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+      $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = $( "entry", xmlResponse ).map(function() {
+            return {
+              title: $( "title", this ).text(),
+              content: $("content",this).text(),
+              url: $( "url" , this).text()
+            };
+          }).get();
+          var $input = document.getElementById(search_id);
+          var $resultContent = document.getElementById(content_id);
+          $input.addEventListener('input', function(){
+            var matchcounts = 0;
+            var str='<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length > 1) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var content_index = [];
+                var data_title = data.title.trim().toLowerCase();
+                var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                var data_url = decodeURIComponent(data.url);
+                var index_title = -1;
+                var index_content = -1;
+                var first_occur = -1;
+                // only match artiles with not empty titles and contents
+                if(data_title != '') {
+                  keywords.forEach(function(keyword, i) {
+                    index_title = data_title.indexOf(keyword);
+                    index_content = data_content.indexOf(keyword);
+                    if( index_title >= 0 || index_content >= 0 ){
+                      isMatch = true;
+                      if (i == 0) {
+                        first_occur = index_content;
+                      }
+                    }
+
+                  });
+                }
+                // show search results
+                if (isMatch) {
+                  matchcounts += 1;
+                  str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                  var content = data.content.trim().replace(/<[^>]+>/g,"");
+                  if (first_occur >= 0) {
+                    // cut out 100 characters
+                    var start = first_occur - 20;
+                    var end = first_occur + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if(start == 0){
+                      end = 50;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    var match_content = content.substring(start, end);
+                    // highlight all keywords
+                    keywords.forEach(function(keyword){
+                      var regS = new RegExp(keyword, "gi");
+                      match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                    });
+
+                    str += "<p class=\"search-result\">" + match_content +"...</p>"
+                  }
+                  str += "</li>";
+                }
+              })};
+            str += "</ul>";
+            if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+            if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+            $resultContent.innerHTML = str;
+          });
+          proceedsearch();
+        }
+      });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".popoverlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+  
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("JJTvMcz1cuKgXUytD4wdFjpN-gzGzoHsz", "ayKqpYreoW4mOQK4IrpRS8rP");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+
+
+</body>
+</html>

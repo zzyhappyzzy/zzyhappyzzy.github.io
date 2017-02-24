@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+
+    
+  <url>
+    <loc>http://zyoung.me/%E8%B0%88%E8%B0%88MVC%E5%92%8CMVVM/</loc>
+    <lastmod>2017-02-24T07:56:29.000Z</lastmod>
+    <data>
+        <display>
+        <title>谈谈MVC和MVVM</title>
+        <pubTime>2017-02-24T07:42:18.000Z</pubTime>
+        
+        <tag>MVC</tag>
+         
+        <tag>MVVM</tag>
+         
+         
+           
+             
+              <breadCrumb title="设计模式" url="http://zyoung.me/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zyoung.me/mac%E7%94%B5%E8%84%91%E9%9A%90%E8%97%8F%E6%96%87%E4%BB%B6%E7%9A%84%E6%96%B9%E6%B3%95/</loc>
+    <lastmod>2017-02-24T07:39:06.000Z</lastmod>
+    <data>
+        <display>
+        <title>mac电脑隐藏文件的方法</title>
+        <pubTime>2016-04-28T03:34:45.000Z</pubTime>
+        
+        <tag>mac</tag>
+         
+         
+           
+             
+              <breadCrumb title="小技巧" url="http://zyoung.me/categories/%E5%B0%8F%E6%8A%80%E5%B7%A7/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zyoung.me/IOS%E7%94%9F%E6%88%90%E9%9D%99%E6%80%81%E5%BA%93-a%E6%96%87%E4%BB%B6/</loc>
+    <lastmod>2017-02-24T07:39:06.000Z</lastmod>
+    <data>
+        <display>
+        <title>IOS生成静态库.a文件</title>
+        <pubTime>2016-04-25T03:32:26.000Z</pubTime>
+        
+        <tag>IOS</tag>
+         
+         
+           
+             
+              <breadCrumb title="学习笔记" url="http://zyoung.me/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zyoung.me/Swift%E5%85%A5%E9%97%A8%E7%AF%87/</loc>
+    <lastmod>2017-02-24T07:39:06.000Z</lastmod>
+    <data>
+        <display>
+        <title>Swift入门篇</title>
+        <pubTime>2016-05-16T06:27:08.000Z</pubTime>
+        
+        <tag>IOS</tag>
+         
+         
+           
+             
+              <breadCrumb title="学习笔记" url="http://zyoung.me/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zyoung.me/Jenkins%E8%87%AA%E5%8A%A8%E5%8C%96%E9%9B%86%E6%88%90/</loc>
+    <lastmod>2017-02-24T07:39:06.000Z</lastmod>
+    <data>
+        <display>
+        <title>Jenkins自动化集成</title>
+        <pubTime>2016-05-24T10:09:47.000Z</pubTime>
+        
+        <tag>Jenkins</tag>
+         
+         
+           
+             
+              <breadCrumb title="自动化" url="http://zyoung.me/categories/%E8%87%AA%E5%8A%A8%E5%8C%96/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zyoung.me/app%E6%8F%90%E4%BA%A4appstore%E7%9A%84%E7%AE%80%E4%BB%8B/</loc>
+    <lastmod>2017-02-24T07:39:06.000Z</lastmod>
+    <data>
+        <display>
+        <title>app提交appstore的简介</title>
+        <pubTime>2016-04-26T02:38:17.000Z</pubTime>
+        
+        <tag>IOS</tag>
+         
+         
+           
+             
+              <breadCrumb title="Apple" url="http://zyoung.me/categories/Apple/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zyoung.me/cocoapods%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8%E7%AF%87/</loc>
+    <lastmod>2017-02-24T07:39:06.000Z</lastmod>
+    <data>
+        <display>
+        <title>cocoapods安装和使用入门篇</title>
+        <pubTime>2016-04-25T08:35:07.000Z</pubTime>
+        
+        <tag>cocoapods</tag>
+         
+         
+           
+             
+              <breadCrumb title="学习笔记" url="http://zyoung.me/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zyoung.me/git%E4%BB%93%E5%BA%93%E8%BF%81%E7%A7%BB/</loc>
+    <lastmod>2017-02-24T07:39:06.000Z</lastmod>
+    <data>
+        <display>
+        <title>git仓库迁移</title>
+        <pubTime>2016-04-28T03:54:58.000Z</pubTime>
+        
+        <tag>git</tag>
+         
+         
+           
+             
+              <breadCrumb title="小技巧" url="http://zyoung.me/categories/%E5%B0%8F%E6%8A%80%E5%B7%A7/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zyoung.me/git%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/</loc>
+    <lastmod>2017-02-24T07:39:06.000Z</lastmod>
+    <data>
+        <display>
+        <title>git使用方法</title>
+        <pubTime>2016-04-26T03:10:37.000Z</pubTime>
+        
+        <tag>git</tag>
+         
+         
+           
+             
+              <breadCrumb title="版本管理工具" url="http://zyoung.me/categories/%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zyoung.me/ios-app-%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E7%9A%84%E5%87%A0%E4%B8%AA%E5%BB%BA%E8%AE%AE/</loc>
+    <lastmod>2017-02-24T07:39:06.000Z</lastmod>
+    <data>
+        <display>
+        <title>ios app 性能优化的几个建议</title>
+        <pubTime>2016-04-28T10:14:10.000Z</pubTime>
+        
+        <tag>IOS</tag>
+         
+         
+           
+             
+              <breadCrumb title="Apple" url="http://zyoung.me/categories/Apple/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zyoung.me/ios10%E7%AE%80%E4%BB%8B/</loc>
+    <lastmod>2017-02-24T07:39:06.000Z</lastmod>
+    <data>
+        <display>
+        <title>ios10简介</title>
+        <pubTime>2016-06-21T06:34:30.000Z</pubTime>
+        
+        <tag>IOS</tag>
+         
+        <tag>WWDC</tag>
+         
+         
+           
+             
+              <breadCrumb title="Apple" url="http://zyoung.me/categories/Apple/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zyoung.me/ios%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99/</loc>
+    <lastmod>2017-02-24T07:39:06.000Z</lastmod>
+    <data>
+        <display>
+        <title>ios学习资料</title>
+        <pubTime>2016-06-28T10:05:25.000Z</pubTime>
+        
+        <tag>ios</tag>
+         
+         
+           
+             
+              <breadCrumb title="Apple" url="http://zyoung.me/categories/Apple/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zyoung.me/ios%E5%90%84%E7%A7%8D%E6%8C%87%E9%92%88%E8%AF%B4%E6%98%8E/</loc>
+    <lastmod>2017-02-24T07:39:06.000Z</lastmod>
+    <data>
+        <display>
+        <title>ios各种指针说明</title>
+        <pubTime>2016-04-29T06:01:59.000Z</pubTime>
+        
+        <tag>IOS</tag>
+         
+         
+           
+             
+              <breadCrumb title="Apple" url="http://zyoung.me/categories/Apple/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zyoung.me/ios%E8%AE%BE%E5%A4%87%E4%BF%A1%E6%81%AF/</loc>
+    <lastmod>2017-02-24T07:39:06.000Z</lastmod>
+    <data>
+        <display>
+        <title>ios设备信息</title>
+        <pubTime>2016-06-07T09:46:09.000Z</pubTime>
+        
+        <tag>ios设备</tag>
+         
+         
+           
+             
+              <breadCrumb title="Apple" url="http://zyoung.me/categories/Apple/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zyoung.me/Hexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E4%B9%8B%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E%E6%8E%A8%E5%B9%BF/</loc>
+    <lastmod>2017-02-24T07:39:06.000Z</lastmod>
+    <data>
+        <display>
+        <title>Hexo个人博客之搜索引擎推广</title>
+        <pubTime>2016-04-22T09:21:49.000Z</pubTime>
+        
+        <tag>SEO</tag>
+         
+         
+           
+             
+              <breadCrumb title="疑难解答" url="http://zyoung.me/categories/%E7%96%91%E9%9A%BE%E8%A7%A3%E7%AD%94/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zyoung.me/markdown%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2017-02-24T07:39:06.000Z</lastmod>
+    <data>
+        <display>
+        <title>markdown学习笔记</title>
+        <pubTime>2016-04-14T07:40:08.000Z</pubTime>
+        
+        <tag>markdown</tag>
+         
+         
+           
+             
+              <breadCrumb title="学习笔记" url="http://zyoung.me/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zyoung.me/xcode%E7%9A%84BuildSetting%E9%85%8D%E7%BD%AE%E8%AF%B4%E6%98%8E/</loc>
+    <lastmod>2017-02-24T07:39:06.000Z</lastmod>
+    <data>
+        <display>
+        <title>Xcode的BuildSetting配置说明</title>
+        <pubTime>2016-04-29T06:24:46.000Z</pubTime>
+        
+        <tag>Xcode</tag>
+         
+         
+           
+             
+              <breadCrumb title="Apple" url="http://zyoung.me/categories/Apple/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zyoung.me/nodeJS%E5%AE%89%E8%A3%85%E5%92%8C%E6%9B%B4%E6%96%B0/</loc>
+    <lastmod>2017-02-24T07:39:06.000Z</lastmod>
+    <data>
+        <display>
+        <title>nodeJS安装和更新</title>
+        <pubTime>2016-06-23T03:06:30.000Z</pubTime>
+        
+        <tag>node.js</tag>
+         
+         
+           
+             
+              <breadCrumb title="javascript" url="http://zyoung.me/categories/javascript/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zyoung.me/%E4%BB%A3%E7%A0%81%E8%AF%8A%E6%96%ADClang-Diagnostics/</loc>
+    <lastmod>2017-02-24T07:39:06.000Z</lastmod>
+    <data>
+        <display>
+        <title>代码诊断Clang Diagnostics</title>
+        <pubTime>2016-06-27T10:30:04.000Z</pubTime>
+        
+        <tag>Clang</tag>
+         
+         
+           
+             
+              <breadCrumb title="LLVM" url="http://zyoung.me/categories/LLVM/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zyoung.me/%E5%A0%86%E5%92%8C%E6%A0%88%E7%9A%84%E5%8C%BA%E5%88%AB/</loc>
+    <lastmod>2017-02-24T07:39:06.000Z</lastmod>
+    <data>
+        <display>
+        <title>堆和栈的区别</title>
+        <pubTime>2016-04-29T03:37:27.000Z</pubTime>
+        
+        <tag>堆栈</tag>
+         
+         
+           
+             
+              <breadCrumb title="内存管理" url="http://zyoung.me/categories/%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zyoung.me/%E6%95%B0%E6%8D%AE%E6%89%93%E5%8C%85%E5%92%8C%E8%A7%A3%E5%8C%85%E5%85%A5%E9%97%A8%E7%AF%87/</loc>
+    <lastmod>2017-02-24T07:39:06.000Z</lastmod>
+    <data>
+        <display>
+        <title>数据打包和解包入门篇</title>
+        <pubTime>2016-06-27T10:01:14.000Z</pubTime>
+        
+        <tag>打包/解包</tag>
+         
+         
+           
+             
+              <breadCrumb title="数据处理" url="http://zyoung.me/categories/%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zyoung.me/2017%E6%96%B0%E7%9A%84%E8%B5%B7%E7%82%B9/</loc>
+    <lastmod>2017-02-24T07:39:06.000Z</lastmod>
+    <data>
+        <display>
+        <title>2017新的起点</title>
+        <pubTime>2017-02-08T06:57:19.000Z</pubTime>
+        
+        <tag>杂记</tag>
+         
+         
+           
+             
+              <breadCrumb title="随笔" url="http://zyoung.me/categories/%E9%9A%8F%E7%AC%94/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
+    
+    
+    
+    
+</urlset>
