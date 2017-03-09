@@ -54,7 +54,7 @@
     <entry>
       <title><![CDATA[nodeJS安装和更新]]></title>
       <url>%2FnodeJS%E5%AE%89%E8%A3%85%E5%92%8C%E6%9B%B4%E6%96%B0%2F</url>
-      <content type="text"><![CDATA[说明本文只记录macOSX系统，其它系统参考官网 安装HomeBrew安装12/usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;brew install node 安装包官网下载最新安装包即可 更新HomeBrew安装的node1brew upgrade node 其它方式安装的node使用node的包管理工具n 123sudo npm cache clean -fsudo npm install -g nsudo n stable n简要说明sudo n version 可以安装指定node版本，如sudo n v4.4.5（如果电脑没有指定的版本，则会自动安装并将node切换到该版本；如果安装了，则直接切换到指定的版本）。n list可以查看所有的node版本n可以查看已安装的node版本 卸载HomeBrew安装的brew uninstall noden安装的sudo n rm version]]></content>
+      <content type="text"><![CDATA[说明本文只记录macOSX系统，其它系统参考官网 安装HomeBrew安装12/usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;brew install node 安装包官网下载最新安装包即可 更新HomeBrew安装的node1brew upgrade node 其它方式安装的node使用node的包管理工具n 123sudo npm cache clean -fsudo npm install -g nsudo n stable n简要说明sudo n version 可以安装指定node版本，如sudo n v4.4.5（如果电脑没有指定的版本，则会自动安装并将node切换到该版本；如果安装了，则直接切换到指定的版本）。n list可以查看所有的node版本n可以查看已安装的node版本 卸载 HomeBrew安装的brew uninstall node n安装的sudo n rm version shell脚本卸载1234567lsbom -f -l -s -pf /var/db/receipts/org.nodejs.pkg.bom \| while read i; do sudo rm /usr/local/$&#123;i&#125;donesudo rm -rf /usr/local/lib/node \ /usr/local/lib/node_modules \ /var/db/receipts/org.nodejs.*]]></content>
     </entry>
 
     
