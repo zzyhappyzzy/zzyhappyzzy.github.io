@@ -93,7 +93,7 @@
 <meta property="og:url" content="http://zyoung.me/cocoapods安装和使用入门篇/index.html">
 <meta property="og:site_name" content="zyoung的小窝">
 <meta property="og:description" content="cocoapods是Xcode管理第三方类库的工具（当然也可以管理自己封装的私有库），能够处理类库之间的依赖关系，方便多个类库的升级和管理。它是用ruby语言编写的。">
-<meta property="og:updated_time" content="2017-03-28T01:50:13.000Z">
+<meta property="og:updated_time" content="2017-03-29T06:57:58.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="cocoapods安装和使用入门篇">
 <meta name="twitter:description" content="cocoapods是Xcode管理第三方类库的工具（当然也可以管理自己封装的私有库），能够处理类库之间的依赖关系，方便多个类库的升级和管理。它是用ruby语言编写的。">
@@ -405,8 +405,16 @@
 
       
         <p>cocoapods是Xcode管理第三方类库的工具（当然也可以管理自己封装的私有库），能够处理类库之间的依赖关系，方便多个类库的升级和管理。它是用ruby语言编写的。<br><a id="more"></a></p>
-<h4 id="一、更换ruby源-ruby官方源很可能被墙了"><a href="#一、更换ruby源-ruby官方源很可能被墙了" class="headerlink" title="一、更换ruby源(ruby官方源很可能被墙了)"></a>一、更换ruby源(ruby官方源很可能被墙了)</h4><p>打开命令行窗口terminal，依次输入下面的命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">gem sources --remove https://rubygems.org/</div><div class="line">gem sources --add https://ruby.taobao.org/</div></pre></td></tr></table></figure></p>
-<p>接着输入<code>gem sources -l</code>即可看到如下结果<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">*** CURRENT SOURCES ***</div><div class="line"></div><div class="line">https://ruby.taobao.org/</div></pre></td></tr></table></figure></p>
+<h4 id="一、更换ruby源"><a href="#一、更换ruby源" class="headerlink" title="一、更换ruby源"></a>一、更换ruby源</h4><p>打开命令行工具terminal，依次输入下面的命令</p>
+<blockquote>
+<p>ruby官方源<code>https://rubygems.org/</code>很可能被墙了<br>淘宝的ruby源<del><a href="https://ruby.taobao.org/" target="_blank" rel="external">https://ruby.taobao.org/</a></del>已停更，建议使用最新的ruby-china源<strong><a href="http://gems.ruby-china.org/" target="_blank" rel="external">http://gems.ruby-china.org/</a></strong></p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">gem sources --remove https://rubygems.org/</div><div class="line">gem sources --add http://gems.ruby-china.org/</div></pre></td></tr></table></figure>
+<p>接着输入<code>gem sources -l</code>即可看到如下结果</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">*** CURRENT SOURCES ***</div><div class="line"></div><div class="line">http://gems.ruby-china.org/</div></pre></td></tr></table></figure>
+<blockquote>
+<p>如果想用ruby-china的https源<em><a href="https://gems.ruby-china.org/" target="_blank" rel="external">https://gems.ruby-china.org/</a></em>，需要给gem配置证书,具体参考<a href="https://github.com/ruby-china/rubygems-mirror/issues/5" target="_blank" rel="external">github-ruby-ssl</a></p>
+</blockquote>
 <p>顺便更新下gem，输入命令<code>sudo gem update --system</code>即可。（<code>需升级</code>）</p>
 <blockquote>
 <p>最近升级cocoapods到1.2.0出了点问题，就是由于gem版本太低导致的，所以尽量保持gem也是最新版本。</p>
@@ -442,6 +450,7 @@
 <blockquote>
 <p>每次执行<code>pod install</code>后，Podfile.lock都会更新。如果团队使用git/svn之类的版本管理工具，必须将Podfile.lock纳入版本管理。否则，团队中不同的人看到的cocoapods管理的第三方库版本可能不一致，甚至报错。</p>
 </blockquote>
+<h4 id="九、gem安装其它库的写权限问题"><a href="#九、gem安装其它库的写权限问题" class="headerlink" title="九、gem安装其它库的写权限问题"></a>九、gem安装其它库的写权限问题</h4><p><code>gem install</code> 时加入参数 <code>-n /usr/local/bin</code> 指定安装目录即可。(eg：<code>sudo gem install -n /usr/local/bin cocoapods</code>)</p>
 
       
     </div>
@@ -694,7 +703,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#一、更换ruby源-ruby官方源很可能被墙了"><span class="nav-number">1.</span> <span class="nav-text">一、更换ruby源(ruby官方源很可能被墙了)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#二、安装cocoapods"><span class="nav-number">2.</span> <span class="nav-text">二、安装cocoapods</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#三、下载pod仓库索引"><span class="nav-number">3.</span> <span class="nav-text">三、下载pod仓库索引</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#四、更新pod索引表"><span class="nav-number">4.</span> <span class="nav-text">四、更新pod索引表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#五、升级cocoapods版本"><span class="nav-number">5.</span> <span class="nav-text">五、升级cocoapods版本</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#六、使用cocoapods"><span class="nav-number">6.</span> <span class="nav-text">六、使用cocoapods</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#七、安装第三方库"><span class="nav-number">7.</span> <span class="nav-text">七、安装第三方库</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#八、卸载cocoapods"><span class="nav-number">8.</span> <span class="nav-text">八、卸载cocoapods</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#一、更换ruby源"><span class="nav-number">1.</span> <span class="nav-text">一、更换ruby源</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#二、安装cocoapods"><span class="nav-number">2.</span> <span class="nav-text">二、安装cocoapods</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#三、下载pod仓库索引"><span class="nav-number">3.</span> <span class="nav-text">三、下载pod仓库索引</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#四、更新pod索引表"><span class="nav-number">4.</span> <span class="nav-text">四、更新pod索引表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#五、升级cocoapods版本"><span class="nav-number">5.</span> <span class="nav-text">五、升级cocoapods版本</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#六、使用cocoapods"><span class="nav-number">6.</span> <span class="nav-text">六、使用cocoapods</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#七、安装第三方库"><span class="nav-number">7.</span> <span class="nav-text">七、安装第三方库</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#八、卸载cocoapods"><span class="nav-number">8.</span> <span class="nav-text">八、卸载cocoapods</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#九、gem安装其它库的写权限问题"><span class="nav-number">9.</span> <span class="nav-text">九、gem安装其它库的写权限问题</span></a></li></ol></div>
             
 
           </div>
