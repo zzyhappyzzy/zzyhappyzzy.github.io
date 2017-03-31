@@ -108,7 +108,7 @@
     fancybox: true,
     motion: true,
     duoshuo: {
-      userId: '0',
+      userId: 'undefined',
       author: '博主'
     },
     algolia: {
@@ -371,7 +371,7 @@
                   <i class="fa fa-comment-o"></i>
                 </span>
                 <a href="/app提交appstore的简介/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="app提交appstore的简介/" itemprop="commentCount"></span>
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="app提交appstore的简介/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -542,7 +542,7 @@
                   <i class="fa fa-comment-o"></i>
                 </span>
                 <a href="/cocoapods安装和使用入门篇/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="cocoapods安装和使用入门篇/" itemprop="commentCount"></span>
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="cocoapods安装和使用入门篇/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -710,7 +710,7 @@
                   <i class="fa fa-comment-o"></i>
                 </span>
                 <a href="/IOS生成静态库-a文件/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="IOS生成静态库-a文件/" itemprop="commentCount"></span>
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="IOS生成静态库-a文件/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -879,7 +879,7 @@
                   <i class="fa fa-comment-o"></i>
                 </span>
                 <a href="/Hexo个人博客之搜索引擎推广/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="Hexo个人博客之搜索引擎推广/" itemprop="commentCount"></span>
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="Hexo个人博客之搜索引擎推广/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -1053,7 +1053,7 @@
                   <i class="fa fa-comment-o"></i>
                 </span>
                 <a href="/markdown学习笔记/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="markdown学习笔记/" itemprop="commentCount"></span>
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="markdown学习笔记/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -1241,10 +1241,6 @@
                   <a href="http://blog.aha-nstd.com/" title="毛毛" target="_blank">毛毛</a>
                 </li>
               
-                <li class="links-of-blogroll-item">
-                  <a href="https://www.objc.io/" title="OBJC" target="_blank">OBJC</a>
-                </li>
-              
             </ul>
           </div>
         
@@ -1374,32 +1370,31 @@
 
   
 
-  
-    
-  
 
-  <script type="text/javascript">
-    var duoshuoQuery = {short_name:"zhenchyblog"};
-    (function() {
-      var ds = document.createElement('script');
-      ds.type = 'text/javascript';ds.async = true;
-      ds.id = 'duoshuo-script';
-      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-      ds.charset = 'UTF-8';
-      (document.getElementsByTagName('head')[0]
-      || document.getElementsByTagName('body')[0]).appendChild(ds);
-    })();
-  </script>
 
   
-    
-    
-    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
-    <script src="/js/src/hook-duoshuo.js"></script>
+
+    <script type="text/javascript">
+      var disqus_shortname = 'zhenchyblog';
+      var disqus_identifier = 'page/3/index.html';
+
+      var disqus_title = "";
+
+
+      function run_disqus_script(disqus_script) {
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      }
+
+      run_disqus_script('count.js');
+
+      
+
+    </script>
   
-
-
-
 
 
 

@@ -118,7 +118,7 @@
     fancybox: true,
     motion: true,
     duoshuo: {
-      userId: '0',
+      userId: 'undefined',
       author: '博主'
     },
     algolia: {
@@ -376,7 +376,7 @@
                   <i class="fa fa-comment-o"></i>
                 </span>
                 <a href="/mac电脑隐藏文件的方法/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="mac电脑隐藏文件的方法/" itemprop="commentCount"></span>
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="mac电脑隐藏文件的方法/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -536,8 +536,11 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="mac电脑隐藏文件的方法/"
-           data-title="mac电脑隐藏文件的方法" data-url="http://zyoung.me/mac电脑隐藏文件的方法/">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
       </div>
     
   </div>
@@ -645,10 +648,6 @@
               
                 <li class="links-of-blogroll-item">
                   <a href="http://blog.aha-nstd.com/" title="毛毛" target="_blank">毛毛</a>
-                </li>
-              
-                <li class="links-of-blogroll-item">
-                  <a href="https://www.objc.io/" title="OBJC" target="_blank">OBJC</a>
                 </li>
               
             </ul>
@@ -800,32 +799,38 @@
 
   
 
-  
-    
-  
 
-  <script type="text/javascript">
-    var duoshuoQuery = {short_name:"zhenchyblog"};
-    (function() {
-      var ds = document.createElement('script');
-      ds.type = 'text/javascript';ds.async = true;
-      ds.id = 'duoshuo-script';
-      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-      ds.charset = 'UTF-8';
-      (document.getElementsByTagName('head')[0]
-      || document.getElementsByTagName('body')[0]).appendChild(ds);
-    })();
-  </script>
 
   
-    
-    
-    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
-    <script src="/js/src/hook-duoshuo.js"></script>
+
+    <script type="text/javascript">
+      var disqus_shortname = 'zhenchyblog';
+      var disqus_identifier = 'mac电脑隐藏文件的方法/';
+
+      var disqus_title = "mac电脑隐藏文件的方法";
+
+
+      function run_disqus_script(disqus_script) {
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      }
+
+      run_disqus_script('count.js');
+
+      
+        var disqus_config = function () {
+            this.page.url = disqus_url;
+            this.page.identifier = disqus_identifier;
+            this.page.title = disqus_title;
+        };
+        run_disqus_script('embed.js');
+      
+
+    </script>
   
-
-
-
 
 
 
