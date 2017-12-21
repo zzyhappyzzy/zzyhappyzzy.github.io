@@ -88,11 +88,13 @@
 
 
 <meta name="description" content="在IOS开发的过程中，你肯定听说过MVC下面记录下个人对这种设计模式的理解，顺便谈谈衍生的MVVM设计模式。">
+<meta name="keywords" content="MVC,MVVM">
 <meta property="og:type" content="article">
 <meta property="og:title" content="谈谈MVC和MVVM">
 <meta property="og:url" content="http://zyoung.me/谈谈MVC和MVVM/index.html">
 <meta property="og:site_name" content="zyoung的小窝">
 <meta property="og:description" content="在IOS开发的过程中，你肯定听说过MVC下面记录下个人对这种设计模式的理解，顺便谈谈衍生的MVVM设计模式。">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://zyoung.me/mvc/model_view_controller.png">
 <meta property="og:image" content="http://zyoung.me/mvc/ms_mvvm.png">
 <meta property="og:updated_time" content="2017-02-24T07:56:29.000Z">
@@ -407,7 +409,7 @@
       
 
       
-        <p>在IOS开发的过程中，你肯定听说过<a href="https://developer.apple.com/library/content/documentation/General/Conceptual/DevPedia-CocoaCore/MVC.html" target="_blank" rel="external">MVC</a><br>下面记录下个人对这种设计模式的理解，顺便谈谈衍生的<a href="https://msdn.microsoft.com/en-us/library/hh848246.aspx" target="_blank" rel="external">MVVM</a>设计模式。</p>
+        <p>在IOS开发的过程中，你肯定听说过<a href="https://developer.apple.com/library/content/documentation/General/Conceptual/DevPedia-CocoaCore/MVC.html" target="_blank" rel="noopener">MVC</a><br>下面记录下个人对这种设计模式的理解，顺便谈谈衍生的<a href="https://msdn.microsoft.com/en-us/library/hh848246.aspx" target="_blank" rel="noopener">MVVM</a>设计模式。</p>
 <a id="more"></a>
 <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>不管采用哪种设计模式，都是为了程序结构更清晰，便于后续扩展、复用，从某方面来说，程序员的最大敌人就是需求的不断更新和增加，而我们要做的就是：以不变应万变。这就需要相应的设计模式了，否则，我们的程序只会越来越庞大，到处都是冗余代码，无法维护和扩展，最终谁也拿它没辙。</p>
 <p>换句话说，编码的原则是DRY<code>Don&#39;t repeat yourself</code>，如果你发现项目里有很多重复/类似的代码、某个类特别庞大、改需求特别痛苦、新项目完全从零起步，那我们就必须思考问题出在哪，并用相应的设计模式来重构代码，避免发生上述的状况</p>
@@ -428,8 +430,8 @@
 <p>对比MVC，可以发现他们很相似，视图View和数据Model并没有直接通信，都要通过中间控制器协调（Controller或ViewModel）。<br>那么在IOS开发中，ViewController和View都被划分到MVVM的视图层，Model还是模型层，ViewModel能主动调用Model的api对Model进行更改，也能在Model更改时对自身进行更新，然后通过View和ViewModel之间的绑定，对View进行更新。</p>
 <p>View和ViewModel的绑定，常见的有两种方法</p>
 <ul>
-<li>KVO 如<a href="https://github.com/ReactiveKit/Bond" target="_blank" rel="external">Bond</a></li>
-<li>函数式响应编程 如<a href="https://github.com/ReactiveCocoa/ReactiveCocoa" target="_blank" rel="external">ReactiveCocoa</a></li>
+<li>KVO 如<a href="https://github.com/ReactiveKit/Bond" target="_blank" rel="noopener">Bond</a></li>
+<li>函数式响应编程 如<a href="https://github.com/ReactiveCocoa/ReactiveCocoa" target="_blank" rel="noopener">ReactiveCocoa</a></li>
 </ul>
 
       
@@ -602,7 +604,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">26</span>
+                <span class="site-state-item-count">27</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -611,7 +613,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-count">13</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -620,7 +622,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">28</span>
+                <span class="site-state-item-count">29</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

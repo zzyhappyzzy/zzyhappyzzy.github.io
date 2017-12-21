@@ -88,11 +88,13 @@
 
 
 <meta name="description" content="随着互联网的普及，不管是PC端的web，还是移动端的app，甚至智能家居等，绝大部分的通信都是依靠http协议传输数据，但http协议只负责传递信息，并不能保证信息的安全性和可靠性。">
+<meta name="keywords" content="http,https,ssl&#x2F;tls,数字签名">
 <meta property="og:type" content="article">
 <meta property="og:title" content="对https的一些理解">
 <meta property="og:url" content="http://zyoung.me/对https的一些理解/index.html">
 <meta property="og:site_name" content="zyoung的小窝">
 <meta property="og:description" content="随着互联网的普及，不管是PC端的web，还是移动端的app，甚至智能家居等，绝大部分的通信都是依靠http协议传输数据，但http协议只负责传递信息，并不能保证信息的安全性和可靠性。">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://zyoung.me/secure/digital_signature.png">
 <meta property="og:image" content="http://zyoung.me/secure/http-vs-https.png">
 <meta property="og:updated_time" content="2017-03-28T10:53:18.000Z">
@@ -417,7 +419,7 @@
 <li>数据真实性验证</li>
 </ul>
 <p>有些人可能认为信息安全对我有什么用？根本就没必要关心这些。但真的是这样么？互联网世界，比现实的世界更复杂，到处都可能是陷阱。作为普通的网民，如果你的浏览记录能够被人随意查看，或者被强行插入广告，甚至弹出恶意挂马的链接。。。你会作何感想？作为服务提供方，客户和你们的信息传递被人随意监听，甚至拦截更改数据，你又作何感想？</p>
-<p>不管怎么说，服务提供方有义务为用户提供安全的通信机制，来保护用户的隐私和安全。在此基础上，网景公司Netscape提出了SSL<code>Secure Sockets Layer</code>协议，之后，国际组织<a href="https://www.ietf.org/" target="_blank" rel="external">IETF</a>在SSL的基础上，制定出标准化的TLS<code>Transport Layer Security</code>协议，不管是SSL还是TLS，都可用于其他的网络协议，如：FTP、SMTP、NNTP、XMPP等。</p>
+<p>不管怎么说，服务提供方有义务为用户提供安全的通信机制，来保护用户的隐私和安全。在此基础上，网景公司Netscape提出了SSL<code>Secure Sockets Layer</code>协议，之后，国际组织<a href="https://www.ietf.org/" target="_blank" rel="noopener">IETF</a>在SSL的基础上，制定出标准化的TLS<code>Transport Layer Security</code>协议，不管是SSL还是TLS，都可用于其他的网络协议，如：FTP、SMTP、NNTP、XMPP等。</p>
 <h1 id="HTTPS"><a href="#HTTPS" class="headerlink" title="HTTPS"></a>HTTPS</h1><p>HTTPS，全称<code>Hyper Text Transport Protocol Secure</code>，又被称为<code>HTTP over TLS</code>或者<code>HTTP Secure</code>，主要目的是在不安全的网络通信环境上建立安全的通信机制，尽量保证信息的安全性和正确性。</p>
 <p>SSL/TLS采用非对称加密算法，简单的说，就是公开公钥，保留私钥。通常来说，消息经过公钥加密后，只有持有私钥才能解密，得到最原始的可读消息。反过来，公钥加密的消息，只有通过私钥解密才能还原真实信息。整个过程就是常说的”数字签名”。</p>
 <p>数字签名的示意图如下：<br><img src="/secure/digital_signature.png" alt=""></p>
@@ -603,7 +605,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">26</span>
+                <span class="site-state-item-count">27</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -612,7 +614,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-count">13</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -621,7 +623,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">28</span>
+                <span class="site-state-item-count">29</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

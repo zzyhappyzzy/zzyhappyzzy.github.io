@@ -88,11 +88,13 @@
 
 
 <meta name="description" content="cocoapods是Xcode管理第三方类库的工具（当然也可以管理自己封装的私有库），能够处理类库之间的依赖关系，方便多个类库的升级和管理。它是用ruby语言编写的。">
+<meta name="keywords" content="cocoapods">
 <meta property="og:type" content="article">
 <meta property="og:title" content="cocoapods安装和使用入门篇">
 <meta property="og:url" content="http://zyoung.me/cocoapods安装和使用入门篇/index.html">
 <meta property="og:site_name" content="zyoung的小窝">
 <meta property="og:description" content="cocoapods是Xcode管理第三方类库的工具（当然也可以管理自己封装的私有库），能够处理类库之间的依赖关系，方便多个类库的升级和管理。它是用ruby语言编写的。">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2017-03-29T06:57:58.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="cocoapods安装和使用入门篇">
@@ -407,13 +409,13 @@
         <p>cocoapods是Xcode管理第三方类库的工具（当然也可以管理自己封装的私有库），能够处理类库之间的依赖关系，方便多个类库的升级和管理。它是用ruby语言编写的。<br><a id="more"></a></p>
 <h4 id="一、更换ruby源"><a href="#一、更换ruby源" class="headerlink" title="一、更换ruby源"></a>一、更换ruby源</h4><p>打开命令行工具terminal，依次输入下面的命令</p>
 <blockquote>
-<p>ruby官方源<code>https://rubygems.org/</code>很可能被墙了<br>淘宝的ruby源<del><a href="https://ruby.taobao.org/" target="_blank" rel="external">https://ruby.taobao.org/</a></del>已停更，建议使用最新的ruby-china源<strong><a href="http://gems.ruby-china.org/" target="_blank" rel="external">http://gems.ruby-china.org/</a></strong></p>
+<p>ruby官方源<code>https://rubygems.org/</code>很可能被墙了<br>淘宝的ruby源<del><a href="https://ruby.taobao.org/" target="_blank" rel="noopener">https://ruby.taobao.org/</a></del>已停更，建议使用最新的ruby-china源<strong><a href="http://gems.ruby-china.org/" target="_blank" rel="noopener">http://gems.ruby-china.org/</a></strong></p>
 </blockquote>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">gem sources --remove https://rubygems.org/</div><div class="line">gem sources --add http://gems.ruby-china.org/</div></pre></td></tr></table></figure>
 <p>接着输入<code>gem sources -l</code>即可看到如下结果</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">*** CURRENT SOURCES ***</div><div class="line"></div><div class="line">http://gems.ruby-china.org/</div></pre></td></tr></table></figure>
 <blockquote>
-<p>如果想用ruby-china的https源<em><a href="https://gems.ruby-china.org/" target="_blank" rel="external">https://gems.ruby-china.org/</a></em>，需要给gem配置证书,具体参考<a href="https://github.com/ruby-china/rubygems-mirror/issues/5" target="_blank" rel="external">github-ruby-ssl</a></p>
+<p>如果想用ruby-china的https源<em><a href="https://gems.ruby-china.org/" target="_blank" rel="noopener">https://gems.ruby-china.org/</a></em>，需要给gem配置证书,具体参考<a href="https://github.com/ruby-china/rubygems-mirror/issues/5" target="_blank" rel="noopener">github-ruby-ssl</a></p>
 </blockquote>
 <p>顺便更新下gem，输入命令<code>sudo gem update --system</code>即可。（<code>需升级</code>）</p>
 <blockquote>
@@ -620,7 +622,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">26</span>
+                <span class="site-state-item-count">27</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -629,7 +631,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-count">13</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -638,7 +640,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">28</span>
+                <span class="site-state-item-count">29</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

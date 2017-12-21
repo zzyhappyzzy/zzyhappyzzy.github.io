@@ -87,16 +87,14 @@
 
 
 
-<meta name="description" content="如果在同一个git服务器上，你有多个账号（比如你有两个Github账号），就会面临多账号的SSH配置问题。
-
-以下内容是基于MAC电脑，其他操作系统不在本文讨论范畴，但思路一致。">
+<meta name="description" content="如果在同一个git服务器上，你有多个账号（比如你有两个Github账号），就会面临多账号的SSH配置问题。  以下内容是基于MAC电脑，其他操作系统不在本文讨论范畴，但思路一致。">
+<meta name="keywords" content="git,ssh">
 <meta property="og:type" content="article">
 <meta property="og:title" content="多账号SSH配置">
 <meta property="og:url" content="http://zyoung.me/多账号SSH配置/index.html">
 <meta property="og:site_name" content="zyoung的小窝">
-<meta property="og:description" content="如果在同一个git服务器上，你有多个账号（比如你有两个Github账号），就会面临多账号的SSH配置问题。
-
-以下内容是基于MAC电脑，其他操作系统不在本文讨论范畴，但思路一致。">
+<meta property="og:description" content="如果在同一个git服务器上，你有多个账号（比如你有两个Github账号），就会面临多账号的SSH配置问题。  以下内容是基于MAC电脑，其他操作系统不在本文讨论范畴，但思路一致。">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://zyoung.me/ssh/ssh_key_gen.png">
 <meta property="og:image" content="http://zyoung.me/ssh/ssh_add_github_1.png">
 <meta property="og:image" content="http://zyoung.me/ssh/ssh_add_github_2.png">
@@ -106,9 +104,7 @@
 <meta property="og:updated_time" content="2017-06-01T08:12:48.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="多账号SSH配置">
-<meta name="twitter:description" content="如果在同一个git服务器上，你有多个账号（比如你有两个Github账号），就会面临多账号的SSH配置问题。
-
-以下内容是基于MAC电脑，其他操作系统不在本文讨论范畴，但思路一致。">
+<meta name="twitter:description" content="如果在同一个git服务器上，你有多个账号（比如你有两个Github账号），就会面临多账号的SSH配置问题。  以下内容是基于MAC电脑，其他操作系统不在本文讨论范畴，但思路一致。">
 <meta name="twitter:image" content="http://zyoung.me/ssh/ssh_key_gen.png">
 
 
@@ -477,7 +473,7 @@
 <p><code>private keyPath</code> 私钥绝对路径</p>
 <p><code>user</code> 用户名。<strong>服务器的用户名</strong>，不是你的用户名。eg：大部分的git服务器用户名都为git</p>
 <p><code>port</code> 端口号，默认为22</p>
-<p>比如，我在<a href="https://git.coding.net/" target="_blank" rel="external">git.coding.net</a>上有两个账号。<code>.ssh</code>目录下地文件结构如下：</p>
+<p>比如，我在<a href="https://git.coding.net/" target="_blank" rel="noopener">git.coding.net</a>上有两个账号。<code>.ssh</code>目录下地文件结构如下：</p>
 <p><img src="/ssh/ssh_dir_tree.png" alt=""></p>
 <p>其中config文件内容为：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">Host coding1</div><div class="line">  HostName git.coding.net</div><div class="line">  PreferredAuthentications publickey</div><div class="line">  IdentityFile ~/.ssh/coding1/id_rsa</div><div class="line">  User git</div><div class="line"> # Port 22</div><div class="line"></div><div class="line">Host coding2</div><div class="line">  HostName git.coding.net</div><div class="line">  PreferredAuthentications publickey</div><div class="line">  IdentityFile ~/.ssh/coding2/id_rsa</div><div class="line"> # User git</div><div class="line"> # Port 22</div></pre></td></tr></table></figure>
@@ -566,6 +562,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/《悟空传》摘抄/" rel="prev" title="《悟空传》摘抄">
+                《悟空传》摘抄 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -665,7 +665,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">26</span>
+                <span class="site-state-item-count">27</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -674,7 +674,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-count">13</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -683,7 +683,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">28</span>
+                <span class="site-state-item-count">29</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

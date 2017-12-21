@@ -88,11 +88,13 @@
 
 
 <meta name="description" content="说明本文只记录macOSX系统，其它系统参考官网">
+<meta name="keywords" content="node.js">
 <meta property="og:type" content="article">
 <meta property="og:title" content="nodeJS安装和更新">
 <meta property="og:url" content="http://zyoung.me/nodeJS安装和更新/index.html">
 <meta property="og:site_name" content="zyoung的小窝">
 <meta property="og:description" content="说明本文只记录macOSX系统，其它系统参考官网">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2017-03-09T10:00:05.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="nodeJS安装和更新">
@@ -404,11 +406,11 @@
       
 
       
-        <h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><p>本文只记录macOSX系统，其它系统参考<a href="https://nodejs.org/en/" target="_blank" rel="external">官网</a><br><a id="more"></a></p>
-<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><h3 id="HomeBrew安装"><a href="#HomeBrew安装" class="headerlink" title="HomeBrew安装"></a><a href="http://brew.sh/" target="_blank" rel="external">HomeBrew</a>安装</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">/usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;</div><div class="line">brew install node</div></pre></td></tr></table></figure>
-<h3 id="安装包"><a href="#安装包" class="headerlink" title="安装包"></a>安装包</h3><p><a href="https://nodejs.org/en/" target="_blank" rel="external">官网</a>下载最新安装包即可</p>
+        <h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><p>本文只记录macOSX系统，其它系统参考<a href="https://nodejs.org/en/" target="_blank" rel="noopener">官网</a><br><a id="more"></a></p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><h3 id="HomeBrew安装"><a href="#HomeBrew安装" class="headerlink" title="HomeBrew安装"></a><a href="http://brew.sh/" target="_blank" rel="noopener">HomeBrew</a>安装</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">/usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;</div><div class="line">brew install node</div></pre></td></tr></table></figure>
+<h3 id="安装包"><a href="#安装包" class="headerlink" title="安装包"></a>安装包</h3><p><a href="https://nodejs.org/en/" target="_blank" rel="noopener">官网</a>下载最新安装包即可</p>
 <h2 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h2><h3 id="HomeBrew安装的node"><a href="#HomeBrew安装的node" class="headerlink" title="HomeBrew安装的node"></a>HomeBrew安装的node</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">brew upgrade node</div></pre></td></tr></table></figure>
-<h3 id="其它方式安装的node"><a href="#其它方式安装的node" class="headerlink" title="其它方式安装的node"></a>其它方式安装的node</h3><p>使用node的包管理工具<a href="https://github.com/tj/n" target="_blank" rel="external">n</a>  </p>
+<h3 id="其它方式安装的node"><a href="#其它方式安装的node" class="headerlink" title="其它方式安装的node"></a>其它方式安装的node</h3><p>使用node的包管理工具<a href="https://github.com/tj/n" target="_blank" rel="noopener">n</a>  </p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">sudo npm cache clean -f</div><div class="line">sudo npm install -g n</div><div class="line">sudo n stable</div></pre></td></tr></table></figure>
 <h2 id="n简要说明"><a href="#n简要说明" class="headerlink" title="n简要说明"></a>n简要说明</h2><p><code>sudo n version</code> 可以安装指定node版本，如<code>sudo n v4.4.5</code>（如果电脑没有指定的版本，则会自动安装并将node切换到该版本；如果安装了，则直接切换到指定的版本）。<br><code>n list</code>可以查看所有的node版本<br><code>n</code>可以查看已安装的node版本</p>
 <h2 id="卸载"><a href="#卸载" class="headerlink" title="卸载"></a>卸载</h2><ul>
@@ -585,7 +587,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">26</span>
+                <span class="site-state-item-count">27</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -594,7 +596,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-count">13</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -603,7 +605,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">28</span>
+                <span class="site-state-item-count">29</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

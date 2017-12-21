@@ -87,21 +87,23 @@
 
 
 
-<meta name="description" content="说明Jenkins很强大，本文主要记录Jenkins用于IOS自动打包。">
+<meta name="description" content="说明Jenkins很强大，本文主要记录Jenkins用于iOS自动打包。">
+<meta name="keywords" content="Jenkins">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Jenkins自动化集成">
 <meta property="og:url" content="http://zyoung.me/Jenkins自动化集成/index.html">
 <meta property="og:site_name" content="zyoung的小窝">
-<meta property="og:description" content="说明Jenkins很强大，本文主要记录Jenkins用于IOS自动打包。">
+<meta property="og:description" content="说明Jenkins很强大，本文主要记录Jenkins用于iOS自动打包。">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://zyoung.me/Jenkins/jenkins_1.png">
 <meta property="og:image" content="http://zyoung.me/Jenkins/jenkins_2.png">
 <meta property="og:image" content="http://zyoung.me/Jenkins/jenkins_3.png">
 <meta property="og:image" content="http://zyoung.me/Jenkins/jenkins_4.png">
 <meta property="og:image" content="http://zyoung.me/Jenkins/jenkins_5.png">
-<meta property="og:updated_time" content="2017-08-03T08:40:33.000Z">
+<meta property="og:updated_time" content="2017-12-21T02:05:48.309Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Jenkins自动化集成">
-<meta name="twitter:description" content="说明Jenkins很强大，本文主要记录Jenkins用于IOS自动打包。">
+<meta name="twitter:description" content="说明Jenkins很强大，本文主要记录Jenkins用于iOS自动打包。">
 <meta name="twitter:image" content="http://zyoung.me/Jenkins/jenkins_1.png">
 
 
@@ -410,9 +412,9 @@
       
 
       
-        <h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><p>Jenkins很强大，本文主要记录Jenkins用于IOS自动打包。<br><a id="more"></a></p>
-<h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><h4 id="Jenkins官网下载最新安装包"><a href="#Jenkins官网下载最新安装包" class="headerlink" title="Jenkins官网下载最新安装包"></a><a href="https://jenkins.io" target="_blank" rel="external">Jenkins官网</a>下载最新安装包</h4><blockquote>
-<p>如果下载太慢，可以使用我的备份<a href="https://coding.net/u/zzyhappyzzy/p/resourceRepo/git/raw/develop/packages/jenkins-1.651.2.pkg" target="_blank" rel="external">Jenkins1.651.2</a></p>
+        <h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><p>Jenkins很强大，本文主要记录Jenkins用于iOS自动打包。<br><a id="more"></a></p>
+<h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><h4 id="Jenkins官网下载最新安装包"><a href="#Jenkins官网下载最新安装包" class="headerlink" title="Jenkins官网下载最新安装包"></a><a href="https://jenkins.io" target="_blank" rel="noopener">Jenkins官网</a>下载最新安装包</h4><blockquote>
+<p>如果下载太慢，可以使用我的备份<a href="https://coding.net/u/zzyhappyzzy/p/resourceRepo/git/raw/develop/packages/jenkins-1.651.2.pkg" target="_blank" rel="noopener">Jenkins1.651.2</a></p>
 </blockquote>
 <h4 id="双击下载的pkg文件，安装Jenkins。"><a href="#双击下载的pkg文件，安装Jenkins。" class="headerlink" title="双击下载的pkg文件，安装Jenkins。"></a>双击下载的pkg文件，安装Jenkins。</h4><h4 id="安装完成后，在浏览器输入http-localhost-8080可以看到Jenkins的页面"><a href="#安装完成后，在浏览器输入http-localhost-8080可以看到Jenkins的页面" class="headerlink" title="安装完成后，在浏览器输入http://localhost:8080可以看到Jenkins的页面"></a>安装完成后，在浏览器输入<code>http://localhost:8080</code>可以看到Jenkins的页面</h4><p><img src="/Jenkins/jenkins_1.png" alt="">  </p>
 <h4 id="提升jenkins的用户权限为管理员"><a href="#提升jenkins的用户权限为管理员" class="headerlink" title="提升jenkins的用户权限为管理员"></a>提升jenkins的用户权限为管理员</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo dseditgroup -o edit -a jenkins -t user admin</div><div class="line">sudo dscl . append /Groups/_developer GroupMembership jenkins (可选)</div></pre></td></tr></table></figure>
@@ -437,9 +439,13 @@
 <p>重点在xcodebuild、xcrun命令</p>
 </blockquote>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div></pre></td><td class="code"><pre><div class="line">#xxx为具体工程名，记得替换掉，目录结构也可能不一致，需微调</div><div class="line">echo &quot;start execute shell&quot;</div><div class="line">echo $(pwd)</div><div class="line">CURRENT_DIR=$(pwd)</div><div class="line">GIT_VER_NUM=$(git rev-list head | sort | wc -l)</div><div class="line">#GIT_COMMIT_ID=$(git rev-list head | head -1)</div><div class="line">#echo &quot;git version:$&#123;GIT_VER_NUM&#125;,commit id $&#123;GIT_COMMIT_ID&#125;&quot;</div><div class="line">PRO_DIR=&quot;$&#123;CURRENT_DIR&#125;/xxx&quot;</div><div class="line">cd $&#123;PRO_DIR&#125;</div><div class="line">WORKSPACE_DIR=&quot;$&#123;PRO_DIR&#125;/*.xcworkspace&quot;</div><div class="line"></div><div class="line">export LC_ALL=&quot;en_US.UTF-8&quot;</div><div class="line">/usr/local/bin/pod install</div><div class="line">PLIST_DIR=&quot;$&#123;PRO_DIR&#125;/xxx/xxx-Info.plist&quot;</div><div class="line">echo &quot;plist dir is $PLIST_DIR&quot;</div><div class="line"></div><div class="line">#打包前修改build号</div><div class="line">/usr/libexec/PlistBuddy -c &quot;Set CFBundleVersion $&#123;GIT_VER_NUM&#125;&quot; $&#123;PLIST_DIR&#125;</div><div class="line"></div><div class="line">APP_VERSION=$(/usr/libexec/PlistBuddy -c &quot;print CFBundleVersion&quot; $&#123;PLIST_DIR&#125;)</div><div class="line">APP_SHORT_VERSION=$(/usr/libexec/PlistBuddy -c &quot;print CFBundleShortVersionString&quot; $&#123;PLIST_DIR&#125;)</div><div class="line">echo &quot;version $&#123;APP_VERSION&#125; build $&#123;APP_SHORT_VERSION&#125;&quot;</div><div class="line"></div><div class="line">RELEASE_IPA_DIR=$&#123;CURRENT_DIR&#125;/IOS</div><div class="line"></div><div class="line">#date +%Y%m%d%H%M%S</div><div class="line">BUILD_DATE=$(date +%Y%m%d%H%M)</div><div class="line">IPA_NAME=&quot;Release_$&#123;BUILD_DATE&#125;_xxx_V$&#123;APP_SHORT_VERSION&#125;.$&#123;APP_VERSION&#125;.ipa&quot;</div><div class="line">DSYM_NAME=&quot;Release_$&#123;BUILD_DATE&#125;_xxx_V$&#123;APP_SHORT_VERSION&#125;.$&#123;APP_VERSION&#125;.app.dSYM&quot;</div><div class="line"></div><div class="line">if [ -d $&#123;RELEASE_IPA_DIR&#125; ]; then</div><div class="line">echo &quot;$&#123;RELEASE_IPA_DIR&#125; exist&quot;</div><div class="line">rm -rf $&#123;RELEASE_IPA_DIR&#125;/*.ipa</div><div class="line">else</div><div class="line">echo &quot;$&#123;RELEASE_IPA_DIR&#125; do not exist, need create dir&quot;</div><div class="line">mkdir $&#123;RELEASE_IPA_DIR&#125;</div><div class="line">fi</div><div class="line"></div><div class="line">CONFIGURATION_INHOUSE=&quot;Release&quot;</div><div class="line">SCHEME=&quot;xxx&quot;</div><div class="line"></div><div class="line">BUILD_APP_DIR=&quot;$&#123;PRO_DIR&#125;/Build/Products/$&#123;CONFIGURATION_INHOUSE&#125;-iphoneos&quot;</div><div class="line"></div><div class="line">xcodebuild clean -workspace $WORKSPACE_DIR -scheme &quot;$&#123;SCHEME&#125;&quot; -configuration &quot;$&#123;CONFIGURATION_INHOUSE&#125;&quot; -derivedDataPath &quot;$&#123;PRO_DIR&#125;&quot;</div><div class="line">xcodebuild -workspace $WORKSPACE_DIR -scheme &quot;$&#123;SCHEME&#125;&quot; -configuration &quot;$&#123;CONFIGURATION_INHOUSE&#125;&quot; -derivedDataPath &quot;$&#123;PRO_DIR&#125;&quot;</div><div class="line">xcrun -sdk iphoneos PackageApplication -v $&#123;BUILD_APP_DIR&#125;/*.app -o $&#123;RELEASE_IPA_DIR&#125;/$&#123;IPA_NAME&#125;</div><div class="line"></div><div class="line">OUTDIR=&quot;/Users/Shared/Jenkins/IOS&quot;</div><div class="line">BUILD_DATE=$(date +%Y%m%d)</div><div class="line">OUT_IPA_DIR=$&#123;SEAFILEDIR&#125;/$&#123;BUILD_DATE&#125;</div><div class="line">if [ -d $&#123;OUT_IPA_DIR&#125; ]; then</div><div class="line">echo &quot;$&#123;OUT_IPA_DIR&#125; exist&quot;</div><div class="line">else</div><div class="line">echo &quot;$&#123;OUT_IPA_DIR&#125; do not exist, need create dir&quot;</div><div class="line">mkdir $&#123;OUT_IPA_DIR&#125;</div><div class="line">fi</div><div class="line">mv $&#123;RELEASE_IPA_DIR&#125;/$&#123;IPA_NAME&#125; $&#123;OUT_IPA_DIR&#125;</div><div class="line">mv $&#123;BUILD_APP_DIR&#125;/*.dSYM $&#123;OUT_IPA_DIR&#125;/$&#123;DSYM_NAME&#125;</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">###该处为非pod管理的工程关键代码</div><div class="line">#BUILD_APP_DIR=$&#123;CURRENT_DIR&#125;/xxx/build/$&#123;CONFIGURATION_INHOUSE&#125;-iphoneos/*.app</div><div class="line">#xcodebuild clean -project $PRO_DIR -target $&#123;TARGET_NAME&#125; -configuration $&#123;CONFIGURATION_INHOUSE&#125;</div><div class="line">#xcodebuild -project $PRO_DIR -target $&#123;TARGET_NAME&#125; -configuration $&#123;CONFIGURATION_INHOUSE&#125;</div><div class="line">#xcrun -sdk iphoneos PackageApplication -v $&#123;BUILD_APP_DIR&#125; -o $&#123;OUT_IPA_DIR&#125;/$&#123;IPA_NAME&#125;</div></pre></td></tr></table></figure>
-<h2 id="升级"><a href="#升级" class="headerlink" title="升级"></a>升级</h2><p>前段时间将XCode升级到8.3之后，发现之前那的打包脚本被弃用了，顺便更新了下脚本，思路不变，使用export命令生成ipa文件。<br>使用export命令之前，需要在工程目录添加plist文件，描述打包等相关信息。给个appstore包的plist文件例子。</p>
+<h2 id="升级"><a href="#升级" class="headerlink" title="升级"></a>升级</h2><p>前段时间将XCode升级到8.3之后，发现之前那的打包脚本被弃用了，顺便更新下脚本，思路不变，使用export命令生成ipa文件。<br>使用export命令之前，需要在工程目录添加plist文件，描述打包等相关信息。给个appstore包的plist文件例子。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</div><div class="line">&lt;!DOCTYPE plist PUBLIC &quot;-//Apple//DTD PLIST 1.0//EN&quot; &quot;http://www.apple.com/DTDs/PropertyList-1.0.dtd&quot;&gt;</div><div class="line">&lt;plist version=&quot;1.0&quot;&gt;</div><div class="line">&lt;dict&gt;</div><div class="line">    &lt;key&gt;method&lt;/key&gt;</div><div class="line">    &lt;string&gt;app-store&lt;/string&gt;</div><div class="line">&lt;/dict&gt;</div><div class="line">&lt;/plist&gt;</div></pre></td></tr></table></figure>
 <p>inHouse证书的例子，只是将method的value改为enterprise即可。还有其他的值：ad-hoc，development等。上面的plist文件还可以添加其他的键值对，但用默认值即可。</p>
+<blockquote>
+<p>Xcode9.0后，archive需要指明描述文件，也就是上面的plist文件需要新增provisioningProfiles键值对。<br><code>需要将provisioningProfiles值的yourAppBundleId和对应的yourAppProvisioningProfileName改为你app的值</code></p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</div><div class="line">&lt;!DOCTYPE plist PUBLIC &quot;-//Apple//DTD PLIST 1.0//EN&quot; &quot;http://www.apple.com/DTDs/PropertyList-1.0.dtd&quot;&gt;</div><div class="line">&lt;plist version=&quot;1.0&quot;&gt;</div><div class="line">&lt;dict&gt;</div><div class="line">    &lt;key&gt;method&lt;/key&gt;</div><div class="line">    &lt;string&gt;enterprise&lt;/string&gt;</div><div class="line">    &lt;key&gt;provisioningProfiles&lt;/key&gt;</div><div class="line">    &lt;dict&gt;</div><div class="line">      &lt;key&gt;yourAppBundleId&lt;/key&gt;</div><div class="line">      &lt;string&gt;yourAppProvisioningProfileName&lt;/string&gt;</div><div class="line">    &lt;/dict&gt;</div><div class="line">&lt;/dict&gt;</div><div class="line">&lt;/plist&gt;</div></pre></td></tr></table></figure>
 <p>升级后的打包核心脚本，其中packageRelease.plist的内容与上面的例子类似</p>
 <ul>
 <li>普通的工程</li>
@@ -448,8 +454,8 @@
 <ul>
 <li>如果工程用了pod之类的管理</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">CURRENT_DIR=$(pwd)</div><div class="line">PRO_DIR = $&#123;CURRENT_DIR&#125;</div><div class="line">WORKSPACE_DIR=&quot;$&#123;PRO_DIR&#125;/*.xcworkspace&quot;</div><div class="line">CONFIGURATION_INHOUSE=&quot;Release&quot;</div><div class="line">SCHEME=&quot;xxx&quot;</div><div class="line">ARCHIVE_PATH=&quot;$&#123;PRO_DIR&#125;/archivePath/$&#123;SCHEME&#125;.xcarchive&quot;</div><div class="line">EXPORT_PATH=&quot;$&#123;PRO_DIR&#125;/exportPath&quot;</div><div class="line">/usr/bin/security unlock-keychain  -p &quot;jenkins&quot; &quot;/Users/Shared/Jenkins/Library/Keychains/login.keychain&quot;</div><div class="line"></div><div class="line">xcodebuild clean -workspace $&#123;WORKSPACE_DIR&#125; -scheme &quot;$&#123;SCHEME&#125;&quot; -configuration &quot;$&#123;CONFIGURATION_INHOUSE&#125;&quot; -archivePath &quot;$&#123;ARCHIVE_PATH&#125;&quot;</div><div class="line">xcodebuild -workspace $&#123;WORKSPACE_DIR&#125; -scheme &quot;$&#123;SCHEME&#125;&quot; -configuration &quot;$&#123;CONFIGURATION_INHOUSE&#125;&quot; -archivePath &quot;$&#123;ARCHIVE_PATH&#125;&quot; archive</div><div class="line">xcodebuild -exportArchive -archivePath &quot;$&#123;ARCHIVE_PATH&#125;&quot; -exportOptionsPlist  &quot;$&#123;PRO_DIR&#125;/packageInnerRelease.plist&quot; -exportPath &quot;$&#123;EXPORT_PATH&#125;&quot;</div></pre></td></tr></table></figure>
-<h2 id="第三方"><a href="#第三方" class="headerlink" title="第三方"></a>第三方</h2><p>推荐使用  <a href="https://github.com/fastlane/fastlane/" target="_blank" rel="external">fastlane</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">CURRENT_DIR=$(pwd)</div><div class="line">PRO_DIR = $&#123;CURRENT_DIR&#125;</div><div class="line">WORKSPACE_DIR=&quot;$&#123;PRO_DIR&#125;/*.xcworkspace&quot;</div><div class="line">CONFIGURATION_INHOUSE=&quot;Release&quot;</div><div class="line">SCHEME=&quot;xxx&quot;</div><div class="line">ARCHIVE_PATH=&quot;$&#123;PRO_DIR&#125;/archivePath/$&#123;SCHEME&#125;.xcarchive&quot;</div><div class="line">EXPORT_PATH=&quot;$&#123;PRO_DIR&#125;/exportPath&quot;</div><div class="line">/usr/bin/security unlock-keychain  -p &quot;jenkins&quot; &quot;/Users/Shared/Jenkins/Library/Keychains/login.keychain&quot;</div><div class="line"></div><div class="line">xcodebuild clean -workspace $&#123;WORKSPACE_DIR&#125; -scheme &quot;$&#123;SCHEME&#125;&quot; -configuration &quot;$&#123;CONFIGURATION_INHOUSE&#125;&quot; -archivePath &quot;$&#123;ARCHIVE_PATH&#125;&quot;</div><div class="line">xcodebuild -workspace $&#123;WORKSPACE_DIR&#125; -scheme &quot;$&#123;SCHEME&#125;&quot; -configuration &quot;$&#123;CONFIGURATION_INHOUSE&#125;&quot; -archivePath &quot;$&#123;ARCHIVE_PATH&#125;&quot; archive</div><div class="line">xcodebuild -exportArchive -archivePath &quot;$&#123;ARCHIVE_PATH&#125;&quot; -exportOptionsPlist  &quot;$&#123;PRO_DIR&#125;/packageRelease.plist&quot; -exportPath &quot;$&#123;EXPORT_PATH&#125;&quot;</div></pre></td></tr></table></figure>
+<h2 id="第三方"><a href="#第三方" class="headerlink" title="第三方"></a>第三方</h2><p>推荐使用  <a href="https://github.com/fastlane/fastlane/" target="_blank" rel="noopener">fastlane</a></p>
 
       
     </div>
@@ -619,7 +625,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">26</span>
+                <span class="site-state-item-count">27</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -628,7 +634,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-count">13</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -637,7 +643,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">28</span>
+                <span class="site-state-item-count">29</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
