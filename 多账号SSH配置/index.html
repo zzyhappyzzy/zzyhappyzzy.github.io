@@ -93,7 +93,7 @@
 <meta property="og:image" content="http://zyoung.me/ssh/ssh_remote_clone.png">
 <meta property="og:image" content="http://zyoung.me/ssh/ssh_shell_pro.png">
 <meta property="og:image" content="http://zyoung.me/ssh/ssh_dir_tree.png">
-<meta property="og:updated_time" content="2017-06-01T08:12:48.000Z">
+<meta property="og:updated_time" content="2018-02-28T03:52:39.585Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="多账号SSH配置">
 <meta name="twitter:description" content="如果在同一个git服务器上，你有多个账号（比如你有两个Github账号），就会面临多账号的SSH配置问题。  以下内容是基于MAC电脑，其他操作系统不在本文讨论范畴，但思路一致。">
@@ -427,7 +427,7 @@
 <p><img src="/ssh/ssh_shell_pro.png" alt=""></p>
 <h1 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h1><p>这里说的单个ssh key是指一台git服务器只有一个git账号。也就是说，如果你不仅在github有账号，在coding也有账号，甚至团队内部自己搭建了私有的git服务器等，这些服务器都可以公用同一个ssh key的，绝对没有必要创建多个ssh key。你只需要将相同的ssh公钥添加到相应的服务器的账号设置里即可。如果自己不能添加，可以将公钥发给服务器管理人员，让他帮忙添加也行。</p>
 <blockquote>
-<p>ssh key不仅仅用于git服务器，它还支持远程加密登录和相应的操作。比如，登录云服务器，添加ssh key后，可以免密登录</p>
+<p>ssh key不仅仅用于git服务器，它还支持远程加密登录和相应的操作。比如，登录云服务器，添加ssh key后，可以免密登录<br>免密登陆的ssh key存放在文件<code>.ssh/authorized_keys</code>里,如果.ssh目录下没有authorized_keys文件可以自己创建该文件，多个授权的ssh key换行即可</p>
 </blockquote>
 <h1 id="多个SSH-key配置"><a href="#多个SSH-key配置" class="headerlink" title="多个SSH key配置"></a>多个SSH key配置</h1><p>所有通过ssh验证过的IP（域名）都会被系统自动添加到<code>.ssh</code>目录下的known_hosts文件里，下次再次连接该IP（域名）时，优先读取该文件里的SSH key。</p>
 <p>假如有这样的场景：用户A在Github有一个自己私人账号，在电脑上创建并添加过ssh key。某一天，公司要求A再次创建一个公司账号，然后用公司账号拉取项目。</p>
@@ -755,7 +755,7 @@ var jiathis_config={
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; 2016 &mdash; <span itemprop="copyrightYear">2017</span>
+        <div class="copyright">&copy; 2016 &mdash; <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
