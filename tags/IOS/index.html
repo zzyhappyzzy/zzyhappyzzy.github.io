@@ -111,7 +111,7 @@
   <meta name="description" content="个人技术博客，平常写写文章、吐吐槽">
 <meta property="og:type" content="website">
 <meta property="og:title" content="zyoung的小窝">
-<meta property="og:url" content="http://zyoung.me/tags/IOS/index.html">
+<meta property="og:url" content="http://zyoung.me/tags/ios/index.html">
 <meta property="og:site_name" content="zyoung的小窝">
 <meta property="og:description" content="个人技术博客，平常写写文章、吐吐槽">
 <meta property="og:locale" content="zh-CN">
@@ -124,7 +124,7 @@
 
 
 
-  <link rel="canonical" href="http://zyoung.me/tags/IOS/"/>
+  <link rel="canonical" href="http://zyoung.me/tags/ios/"/>
 
 
 
@@ -134,7 +134,7 @@
   };
 </script>
 
-  <title>标签: IOS | zyoung的小窝</title>
+  <title>标签: ios | zyoung的小窝</title>
   
 
 
@@ -340,7 +340,7 @@
 
     <div id="posts" class="posts-collapse">
       <div class="collection-title">
-        <h1>IOS<small>标签</small>
+        <h1>ios<small>标签</small>
         </h1>
       </div>
 
@@ -352,37 +352,9 @@
 
       <h2 class="post-title">
         
-            <a class="post-title-link" href="/ios10简介/" itemprop="url">
+            <a class="post-title-link" href="/ios学习资料/" itemprop="url">
               
-                <span itemprop="name">ios10简介</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-06-21T14:34:30+08:00"
-              content="2016-06-21" >
-          06-21
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/Swift入门篇/" itemprop="url">
-              
-                <span itemprop="name">Swift入门篇</span>
+                <span itemprop="name">ios学习资料</span>
               
             </a>
         
@@ -390,121 +362,9 @@
 
       <div class="post-meta">
         <time class="post-time" itemprop="dateCreated"
-              datetime="2016-05-16T14:27:08+08:00"
-              content="2016-05-16" >
-          05-16
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/ios各种指针说明/" itemprop="url">
-              
-                <span itemprop="name">ios各种指针说明</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-04-29T14:01:59+08:00"
-              content="2016-04-29" >
-          04-29
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/ios-app-性能优化的几个建议/" itemprop="url">
-              
-                <span itemprop="name">ios app 性能优化的几个建议</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-04-28T18:14:10+08:00"
-              content="2016-04-28" >
-          04-28
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/app提交appstore的简介/" itemprop="url">
-              
-                <span itemprop="name">app提交appstore的简介</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-04-26T10:38:17+08:00"
-              content="2016-04-26" >
-          04-26
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/IOS生成静态库-a文件/" itemprop="url">
-              
-                <span itemprop="name">IOS生成静态库.a文件</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-04-25T11:32:26+08:00"
-              content="2016-04-25" >
-          04-25
+              datetime="2016-06-28T18:05:25+08:00"
+              content="2016-06-28" >
+          06-28
         </time>
       </div>
 
@@ -1173,6 +1033,146 @@
 
           if ('auto' === 'auto') {
             input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+  <script>
+    
+    function showTime(Counter) {
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      Counter('get', '/classes/Counter', { where: JSON.stringify({ url: { "$in": entries } }) })
+        .done(function ({ results }) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.url;
+            var time = item.time;
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function ({ responseJSON }) {
+          console.log("LeanCloud Counter Error: " + responseJSON.code + " " + responseJSON.error);
+        });
+    }
+    
+
+    $(function() {
+      $.get('https://app-router.leancloud.cn/2/route?appId=' + "JJTvMcz1cuKgXUytD4wdFjpN-gzGzoHsz")
+        .done(function ({ api_server }) {
+          var Counter = function (method, url, data) {
+            return $.ajax({
+              method: method,
+              url: `https://${api_server}/1.1${url}`,
+              headers: {
+                'X-LC-Id': "JJTvMcz1cuKgXUytD4wdFjpN-gzGzoHsz",
+                'X-LC-Key': "ayKqpYreoW4mOQK4IrpRS8rP",
+                'Content-Type': 'application/json',
+              },
+              data: data,
+            });
+          };
+          
+          if ($('.post-title-link').length >= 1) {
+            showTime(Counter);
+          }
+          
+        })
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
+dy>
+</html>
+EventListener('input', inputEventFunction);
           } else {
             $('.search-icon').click(inputEventFunction);
             input.addEventListener('keypress', function (event) {
