@@ -242,6 +242,46 @@
 
     
   <url>
+    <loc>http://zyoung.me/xcode%E7%9A%84BuildSetting%E9%85%8D%E7%BD%AE%E8%AF%B4%E6%98%8E/</loc>
+    <lastmod>2017-02-24T07:39:06.000Z</lastmod>
+    <data>
+        <display>
+        <title>Xcode的BuildSetting配置说明</title>
+        <pubTime>2016-04-29T06:24:46.000Z</pubTime>
+        
+        <tag>Xcode</tag>
+         
+         
+           
+             
+              <breadCrumb title="Apple" url="http://zyoung.me/categories/Apple/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zyoung.me/ios%E8%AE%BE%E5%A4%87%E4%BF%A1%E6%81%AF/</loc>
+    <lastmod>2017-02-24T07:39:06.000Z</lastmod>
+    <data>
+        <display>
+        <title>ios设备信息</title>
+        <pubTime>2016-06-07T09:46:09.000Z</pubTime>
+        
+        <tag>ios设备</tag>
+         
+         
+           
+             
+              <breadCrumb title="Apple" url="http://zyoung.me/categories/Apple/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://zyoung.me/mac%E7%94%B5%E8%84%91%E9%9A%90%E8%97%8F%E6%96%87%E4%BB%B6%E7%9A%84%E6%96%B9%E6%B3%95/</loc>
     <lastmod>2017-02-24T07:39:06.000Z</lastmod>
     <data>
@@ -262,54 +302,14 @@
 
     
   <url>
-    <loc>http://zyoung.me/ios%E5%90%84%E7%A7%8D%E6%8C%87%E9%92%88%E8%AF%B4%E6%98%8E/</loc>
+    <loc>http://zyoung.me/app%E6%8F%90%E4%BA%A4appstore%E7%9A%84%E7%AE%80%E4%BB%8B/</loc>
     <lastmod>2017-02-24T07:39:06.000Z</lastmod>
     <data>
         <display>
-        <title>ios各种指针说明</title>
-        <pubTime>2016-04-29T06:01:59.000Z</pubTime>
+        <title>app提交appstore的简介</title>
+        <pubTime>2016-04-26T02:38:17.000Z</pubTime>
         
         <tag>IOS</tag>
-         
-         
-           
-             
-              <breadCrumb title="Apple" url="http://zyoung.me/categories/Apple/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://zyoung.me/Swift%E5%85%A5%E9%97%A8%E7%AF%87/</loc>
-    <lastmod>2017-02-24T07:39:06.000Z</lastmod>
-    <data>
-        <display>
-        <title>Swift入门篇</title>
-        <pubTime>2016-05-16T06:27:08.000Z</pubTime>
-        
-        <tag>IOS</tag>
-         
-         
-           
-             
-              <breadCrumb title="学习笔记" url="http://zyoung.me/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://zyoung.me/ios%E8%AE%BE%E5%A4%87%E4%BF%A1%E6%81%AF/</loc>
-    <lastmod>2017-02-24T07:39:06.000Z</lastmod>
-    <data>
-        <display>
-        <title>ios设备信息</title>
-        <pubTime>2016-06-07T09:46:09.000Z</pubTime>
-        
-        <tag>ios设备</tag>
          
          
            
@@ -362,26 +362,6 @@
 
     
   <url>
-    <loc>http://zyoung.me/xcode%E7%9A%84BuildSetting%E9%85%8D%E7%BD%AE%E8%AF%B4%E6%98%8E/</loc>
-    <lastmod>2017-02-24T07:39:06.000Z</lastmod>
-    <data>
-        <display>
-        <title>Xcode的BuildSetting配置说明</title>
-        <pubTime>2016-04-29T06:24:46.000Z</pubTime>
-        
-        <tag>Xcode</tag>
-         
-         
-           
-             
-              <breadCrumb title="Apple" url="http://zyoung.me/categories/Apple/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://zyoung.me/git%E4%BB%93%E5%BA%93%E8%BF%81%E7%A7%BB/</loc>
     <lastmod>2017-02-24T07:39:06.000Z</lastmod>
     <data>
@@ -402,19 +382,19 @@
 
     
   <url>
-    <loc>http://zyoung.me/IOS%E7%94%9F%E6%88%90%E9%9D%99%E6%80%81%E5%BA%93-a%E6%96%87%E4%BB%B6/</loc>
+    <loc>http://zyoung.me/git%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/</loc>
     <lastmod>2017-02-24T07:39:06.000Z</lastmod>
     <data>
         <display>
-        <title>IOS生成静态库.a文件</title>
-        <pubTime>2016-04-25T03:32:26.000Z</pubTime>
+        <title>git使用方法</title>
+        <pubTime>2016-04-26T03:10:37.000Z</pubTime>
         
-        <tag>IOS</tag>
+        <tag>git</tag>
          
          
            
              
-              <breadCrumb title="学习笔记" url="http://zyoung.me/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+              <breadCrumb title="版本管理工具" url="http://zyoung.me/categories/%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/"/>
           
         </display>
     </data>
@@ -482,12 +462,12 @@
 
     
   <url>
-    <loc>http://zyoung.me/app%E6%8F%90%E4%BA%A4appstore%E7%9A%84%E7%AE%80%E4%BB%8B/</loc>
+    <loc>http://zyoung.me/ios-app-%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E7%9A%84%E5%87%A0%E4%B8%AA%E5%BB%BA%E8%AE%AE/</loc>
     <lastmod>2017-02-24T07:39:06.000Z</lastmod>
     <data>
         <display>
-        <title>app提交appstore的简介</title>
-        <pubTime>2016-04-26T02:38:17.000Z</pubTime>
+        <title>ios app 性能优化的几个建议</title>
+        <pubTime>2016-04-28T10:14:10.000Z</pubTime>
         
         <tag>IOS</tag>
          
@@ -495,26 +475,6 @@
            
              
               <breadCrumb title="Apple" url="http://zyoung.me/categories/Apple/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://zyoung.me/git%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/</loc>
-    <lastmod>2017-02-24T07:39:06.000Z</lastmod>
-    <data>
-        <display>
-        <title>git使用方法</title>
-        <pubTime>2016-04-26T03:10:37.000Z</pubTime>
-        
-        <tag>git</tag>
-         
-         
-           
-             
-              <breadCrumb title="版本管理工具" url="http://zyoung.me/categories/%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/"/>
           
         </display>
     </data>
@@ -542,12 +502,32 @@
 
     
   <url>
-    <loc>http://zyoung.me/ios-app-%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E7%9A%84%E5%87%A0%E4%B8%AA%E5%BB%BA%E8%AE%AE/</loc>
+    <loc>http://zyoung.me/IOS%E7%94%9F%E6%88%90%E9%9D%99%E6%80%81%E5%BA%93-a%E6%96%87%E4%BB%B6/</loc>
     <lastmod>2017-02-24T07:39:06.000Z</lastmod>
     <data>
         <display>
-        <title>ios app 性能优化的几个建议</title>
-        <pubTime>2016-04-28T10:14:10.000Z</pubTime>
+        <title>IOS生成静态库.a文件</title>
+        <pubTime>2016-04-25T03:32:26.000Z</pubTime>
+        
+        <tag>IOS</tag>
+         
+         
+           
+             
+              <breadCrumb title="学习笔记" url="http://zyoung.me/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zyoung.me/ios%E5%90%84%E7%A7%8D%E6%8C%87%E9%92%88%E8%AF%B4%E6%98%8E/</loc>
+    <lastmod>2017-02-24T07:39:06.000Z</lastmod>
+    <data>
+        <display>
+        <title>ios各种指针说明</title>
+        <pubTime>2016-04-29T06:01:59.000Z</pubTime>
         
         <tag>IOS</tag>
          
@@ -555,6 +535,26 @@
            
              
               <breadCrumb title="Apple" url="http://zyoung.me/categories/Apple/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zyoung.me/Swift%E5%85%A5%E9%97%A8%E7%AF%87/</loc>
+    <lastmod>2017-02-24T07:39:06.000Z</lastmod>
+    <data>
+        <display>
+        <title>Swift入门篇</title>
+        <pubTime>2016-05-16T06:27:08.000Z</pubTime>
+        
+        <tag>IOS</tag>
+         
+         
+           
+             
+              <breadCrumb title="学习笔记" url="http://zyoung.me/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
           
         </display>
     </data>
