@@ -109,14 +109,14 @@
 
 
   <meta name="description" content="参考链接raywenderlich 优化建议当你开发了几款app后，是否考虑过怎样才能提高自己的app的性能。在开发的过程中，只要我们注意一些要点，可以很轻松地开发出性能优雅的app。这篇文章介绍了23个提高app性能的tips。">
-<meta name="keywords" content="IOS">
+<meta name="keywords" content="iOS">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ios app 性能优化的几个建议">
 <meta property="og:url" content="http://zyoung.me/ios-app-性能优化的几个建议/index.html">
 <meta property="og:site_name" content="zyoung的小窝">
 <meta property="og:description" content="参考链接raywenderlich 优化建议当你开发了几款app后，是否考虑过怎样才能提高自己的app的性能。在开发的过程中，只要我们注意一些要点，可以很轻松地开发出性能优雅的app。这篇文章介绍了23个提高app性能的tips。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-02-24T07:39:06.000Z">
+<meta property="og:updated_time" content="2018-09-10T09:42:25.865Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ios app 性能优化的几个建议">
 <meta name="twitter:description" content="参考链接raywenderlich 优化建议当你开发了几款app后，是否考虑过怎样才能提高自己的app的性能。在开发的过程中，只要我们注意一些要点，可以很轻松地开发出性能优雅的app。这篇文章介绍了23个提高app性能的tips。">
@@ -391,7 +391,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2017-02-24 15:39:06" itemprop="dateModified" datetime="2017-02-24T15:39:06+08:00">2017-02-24</time>
+                <time title="修改时间：2018-09-10 17:42:25" itemprop="dateModified" datetime="2018-09-10T17:42:25+08:00">2018-09-10</time>
               
             
           </span>
@@ -460,18 +460,18 @@
 <h4 id="view的Opaque属性设置为YES"><a href="#view的Opaque属性设置为YES" class="headerlink" title="view的Opaque属性设置为YES"></a>view的Opaque属性设置为YES</h4><h4 id="不要在一个xib或者storyboard放置太多的东西"><a href="#不要在一个xib或者storyboard放置太多的东西" class="headerlink" title="不要在一个xib或者storyboard放置太多的东西"></a>不要在一个xib或者storyboard放置太多的东西</h4><p>因为每次系统加载xib到内存的时候，所有相关的内容都会加载（不管是否展现）,并且相关联的图片等资源也会被加载到内存（图片等还会缓存），很可能导致内存暴涨。</p>
 <h4 id="不要阻塞主线程"><a href="#不要阻塞主线程" class="headerlink" title="不要阻塞主线程"></a>不要阻塞主线程</h4><p>耗时等操作在分线程执行，只有需要刷新界面是才在主线程。学会多线程开发和异步操作很有必要。</p>
 <h4 id="尽可能使图片的大小和imageview一样大"><a href="#尽可能使图片的大小和imageview一样大" class="headerlink" title="尽可能使图片的大小和imageview一样大"></a>尽可能使图片的大小和imageview一样大</h4><p>网络下载的图片，可以先重画为imageview一样大小在显示。因为imageview拉伸或缩小图片代价较大，特别是当imageview嵌套在UIScrollview里的时候。</p>
-<h4 id="选用合适的数据容器。容器说明"><a href="#选用合适的数据容器。容器说明" class="headerlink" title="选用合适的数据容器。容器说明"></a>选用合适的数据容器。<a href="https://developer.apple.com/library/ios/#documentation/cocoa/conceptual/collections/Collections.html" target="_blank" rel="noopener">容器说明</a></h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">* NSArrayi:有序的。能搞按照索引快速查找元素。按照值查找很慢，插入和删除很慢 </span><br><span class="line">* NSDictionary:无序的。键值对存储。按照key可以快速查找。</span><br><span class="line">* NSSet: 无序的。按照值可以快速查找，插入和删除很快。</span><br></pre></td></tr></table></figure>
+<h4 id="选用合适的数据容器。容器说明"><a href="#选用合适的数据容器。容器说明" class="headerlink" title="选用合适的数据容器。容器说明"></a>选用合适的数据容器。<a href="https://developer.apple.com/library/ios/#documentation/cocoa/conceptual/collections/Collections.html" target="_blank" rel="noopener">容器说明</a></h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">* NSArrayi:有序的。能搞按照索引快速查找元素。按照值查找很慢，插入和删除很慢</span><br><span class="line">* NSDictionary:无序的。键值对存储。按照key可以快速查找。</span><br><span class="line">* NSSet: 无序的。按照值可以快速查找，插入和删除很快。</span><br></pre></td></tr></table></figure>
 <h4 id="服务器和客户端采用GZIP压缩"><a href="#服务器和客户端采用GZIP压缩" class="headerlink" title="服务器和客户端采用GZIP压缩"></a>服务器和客户端采用GZIP压缩</h4><p>可以减少网络交互的等待时间和流量。</p>
 <h4 id="尽量重用view。"><a href="#尽量重用view。" class="headerlink" title="尽量重用view。"></a>尽量重用view。</h4><p>重复生成相同模板的view时，可以参照UITableview的重用机制，自己写一套reuse机制。只有在需要时才加载相关view，无关的view只有需要才加载。（如果为了更好的用户体验，在某些情况下可以预加载某些view并让它隐藏，需要时才显示）</p>
 <h4 id="缓存，缓存，缓存"><a href="#缓存，缓存，缓存" class="headerlink" title="缓存，缓存，缓存"></a>缓存，缓存，缓存</h4><p>服务器的图片下载完成并缓存，以后就可以快速读取并加载。tableviewcell的高度也可以缓存。</p>
 <h4 id="考虑图片资源和绘图的代价"><a href="#考虑图片资源和绘图的代价" class="headerlink" title="考虑图片资源和绘图的代价"></a>考虑图片资源和绘图的代价</h4><p>某些效果是切图好还是代码绘制好，需要衡量下</p>
-<h4 id="响应系统发出的内存不足的警告"><a href="#响应系统发出的内存不足的警告" class="headerlink" title="响应系统发出的内存不足的警告"></a>响应系统发出的内存不足的警告</h4><p>如果收到内存不足的通知，需要马上释放缓存及其它可以再次创建的对象。 </p>
-<h4 id="重用一些初始化比较慢的对象"><a href="#重用一些初始化比较慢的对象" class="headerlink" title="重用一些初始化比较慢的对象"></a>重用一些初始化比较慢的对象</h4><p>NSDateFormatter/NSCalendar等，一般可以在你的类中添加一个相应的property即可。<br><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// in your .h or inside a class extension</span></span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>, <span class="keyword">strong</span>) <span class="built_in">NSDateFormatter</span> *formatter;</span><br><span class="line"> </span><br><span class="line"><span class="comment">// inside the implementation (.m)</span></span><br><span class="line"><span class="comment">// When you need, just use self.formatter</span></span><br><span class="line">- (<span class="built_in">NSDateFormatter</span> *)formatter &#123;</span><br><span class="line">    <span class="keyword">static</span> <span class="built_in">NSDateFormatter</span> *formatter;</span><br><span class="line">    <span class="keyword">static</span> <span class="built_in">dispatch_once_t</span> onceToken;</span><br><span class="line">    <span class="built_in">dispatch_once</span>(&amp;onceToken, ^&#123;</span><br><span class="line">        _formatter = [[<span class="built_in">NSDateFormatter</span> alloc] init];</span><br><span class="line">        _formatter.dateFormat = <span class="string">@"EEE MMM dd HH:mm:ss Z yyyy"</span>; <span class="comment">// twitter date format</span></span><br><span class="line">    &#125;);</span><br><span class="line">    <span class="keyword">return</span> formatter;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//这里用GCD可以避免多线程调用重复alloc的问题（如果某个属性不会被多个线程同时调用，不用这么复杂），如下：</span></span><br><span class="line">- (<span class="built_in">NSDateFormatter</span> *)formatter &#123;</span><br><span class="line">    <span class="keyword">if</span> (! _formatter) &#123;</span><br><span class="line">        _formatter = [[<span class="built_in">NSDateFormatter</span> alloc] init];</span><br><span class="line">        _formatter.dateFormat = <span class="string">@"EEE MMM dd HH:mm:ss Z yyyy"</span>; <span class="comment">// twitter date format</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> _formatter;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h4 id="响应系统发出的内存不足的警告"><a href="#响应系统发出的内存不足的警告" class="headerlink" title="响应系统发出的内存不足的警告"></a>响应系统发出的内存不足的警告</h4><p>如果收到内存不足的通知，需要马上释放缓存及其它可以再次创建的对象。</p>
+<h4 id="重用一些初始化比较慢的对象"><a href="#重用一些初始化比较慢的对象" class="headerlink" title="重用一些初始化比较慢的对象"></a>重用一些初始化比较慢的对象</h4><p>NSDateFormatter/NSCalendar等，一般可以在你的类中添加一个相应的property即可。<br><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// in your .h or inside a class extension</span></span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>, <span class="keyword">strong</span>) <span class="built_in">NSDateFormatter</span> *formatter;</span><br><span class="line"></span><br><span class="line"><span class="comment">// inside the implementation (.m)</span></span><br><span class="line"><span class="comment">// When you need, just use self.formatter</span></span><br><span class="line">- (<span class="built_in">NSDateFormatter</span> *)formatter &#123;</span><br><span class="line">    <span class="keyword">static</span> <span class="built_in">NSDateFormatter</span> *formatter;</span><br><span class="line">    <span class="keyword">static</span> <span class="built_in">dispatch_once_t</span> onceToken;</span><br><span class="line">    <span class="built_in">dispatch_once</span>(&amp;onceToken, ^&#123;</span><br><span class="line">        _formatter = [[<span class="built_in">NSDateFormatter</span> alloc] init];</span><br><span class="line">        _formatter.dateFormat = <span class="string">@"EEE MMM dd HH:mm:ss Z yyyy"</span>; <span class="comment">// twitter date format</span></span><br><span class="line">    &#125;);</span><br><span class="line">    <span class="keyword">return</span> formatter;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//这里用GCD可以避免多线程调用重复alloc的问题（如果某个属性不会被多个线程同时调用，不用这么复杂），如下：</span></span><br><span class="line">- (<span class="built_in">NSDateFormatter</span> *)formatter &#123;</span><br><span class="line">    <span class="keyword">if</span> (! _formatter) &#123;</span><br><span class="line">        _formatter = [[<span class="built_in">NSDateFormatter</span> alloc] init];</span><br><span class="line">        _formatter.dateFormat = <span class="string">@"EEE MMM dd HH:mm:ss Z yyyy"</span>; <span class="comment">// twitter date format</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> _formatter;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <h4 id="游戏开发，使用sprite-sheets"><a href="#游戏开发，使用sprite-sheets" class="headerlink" title="游戏开发，使用sprite sheets"></a>游戏开发，使用sprite sheets</h4><h4 id="尽量避免数据结构的来回转换"><a href="#尽量避免数据结构的来回转换" class="headerlink" title="尽量避免数据结构的来回转换"></a>尽量避免数据结构的来回转换</h4><p>服务器的json数据最好是不做处理就能直接使用，可以减少很多中间的转换过程。（如:json转成model）（汗!个人还是推荐转成model）</p>
 <h4 id="选择合适的数据类型"><a href="#选择合适的数据类型" class="headerlink" title="选择合适的数据类型"></a>选择合适的数据类型</h4><p>服务器端发来的数据类型常见的有json和xml，具体看情况选择。xml支持边下载边解析，json必须下载完成才能开始解析。通常还是选择json</p>
 <h4 id="选择合适的背景图"><a href="#选择合适的背景图" class="headerlink" title="选择合适的背景图"></a>选择合适的背景图</h4><p>如果你有一张全屏的背景图，在底层价格UIImageView更好<br><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// You could also achieve the same result in Interface Builder</span></span><br><span class="line"><span class="built_in">UIImageView</span> *backgroundView = [[<span class="built_in">UIImageView</span> alloc] initWithImage:[<span class="built_in">UIImage</span> imageNamed:<span class="string">@"background"</span>]];</span><br><span class="line">[<span class="keyword">self</span>.view addSubview:backgroundView];</span><br></pre></td></tr></table></figure></p>
 <p>如果你有一张较小的带颜色的图，采用背景色较好<br><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">self</span>.view.backgroundColor = [<span class="built_in">UIColor</span> colorWithPatternImage:[<span class="built_in">UIImage</span> imageNamed:<span class="string">@"background"</span>]];</span><br></pre></td></tr></table></figure></p>
-<h4 id="设置阴影路径"><a href="#设置阴影路径" class="headerlink" title="设置阴影路径"></a>设置阴影路径</h4><p>当需要给一个view增加阴影效果时，你会怎么做？<br>大部分的开发者会这样写：<br><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#import <span class="meta-string">&lt;QuartzCore/QuartzCore.h&gt;</span></span></span><br><span class="line"> </span><br><span class="line"><span class="comment">// Somewhere later ...</span></span><br><span class="line"><span class="built_in">UIView</span> *view = [[<span class="built_in">UIView</span> alloc] init];</span><br><span class="line"> </span><br><span class="line"><span class="comment">// Setup the shadow ...</span></span><br><span class="line">view.layer.shadowOffset = <span class="built_in">CGSizeMake</span>(<span class="number">-1.0</span>f, <span class="number">1.0</span>f);</span><br><span class="line">view.layer.shadowRadius = <span class="number">5.0</span>f;</span><br><span class="line">view.layer.shadowOpacity = <span class="number">0.6</span>;</span><br></pre></td></tr></table></figure></p>
+<h4 id="设置阴影路径"><a href="#设置阴影路径" class="headerlink" title="设置阴影路径"></a>设置阴影路径</h4><p>当需要给一个view增加阴影效果时，你会怎么做？<br>大部分的开发者会这样写：<br><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#import <span class="meta-string">&lt;QuartzCore/QuartzCore.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Somewhere later ...</span></span><br><span class="line"><span class="built_in">UIView</span> *view = [[<span class="built_in">UIView</span> alloc] init];</span><br><span class="line"></span><br><span class="line"><span class="comment">// Setup the shadow ...</span></span><br><span class="line">view.layer.shadowOffset = <span class="built_in">CGSizeMake</span>(<span class="number">-1.0</span>f, <span class="number">1.0</span>f);</span><br><span class="line">view.layer.shadowRadius = <span class="number">5.0</span>f;</span><br><span class="line">view.layer.shadowOpacity = <span class="number">0.6</span>;</span><br></pre></td></tr></table></figure></p>
 <p>看起来很简单，不是吗？<br>但糟糕的是，这样并不好。CoreAnimation框架需要耗费不小代价才能绘制出阴影。<br>好消息是，有一种更简单的方法：设置阴影路径。<br><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">view.layer.shadowPath = [[<span class="built_in">UIBezierPath</span> bezierPathWithRect:view.bounds] <span class="built_in">CGPath</span>];</span><br></pre></td></tr></table></figure></p>
 <p>缺点是，每次frame改变后，都需要更新shadow path。</p>
 <h4 id="优化tableview"><a href="#优化tableview" class="headerlink" title="优化tableview"></a>优化tableview</h4><p>为了使tableview滑动更平滑，需要确保下面几项</p>
@@ -552,7 +552,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/IOS/" rel="tag"># IOS</a>
+            <a href="/tags/iOS/" rel="tag"># iOS</a>
           
         </div>
       
@@ -656,7 +656,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">27</span>
+                    <span class="site-state-item-count">28</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -695,7 +695,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">13</span>
+                      
+                    
+                    <span class="site-state-item-count">14</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -764,9 +766,7 @@
                     
                       
                     
-                      
-                    
-                    <span class="site-state-item-count">29</span>
+                    <span class="site-state-item-count">28</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>

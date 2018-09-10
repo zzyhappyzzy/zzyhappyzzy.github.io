@@ -109,14 +109,14 @@
 
 
   <meta name="description" content="说明库是程序代码的合集，常见的有开源库和闭源库，其中.a就是闭源库（无法看到具体实现方法），而Github上的代码基本都是开源库。静态库执行时会被复制到可执行文件中，多次调用则会出现冗余拷贝，不建议使用静态库。可以使用动态库.dylib(动态库貌似通不过appstore审核)或者源码。 生成.a文件一个.a文件，要想兼容各种不同的cpu架构，需要包含各种指令集(amrv7/armv7s/arm64">
-<meta name="keywords" content="IOS">
+<meta name="keywords" content="iOS">
 <meta property="og:type" content="article">
 <meta property="og:title" content="IOS生成静态库.a文件">
 <meta property="og:url" content="http://zyoung.me/IOS生成静态库-a文件/index.html">
 <meta property="og:site_name" content="zyoung的小窝">
 <meta property="og:description" content="说明库是程序代码的合集，常见的有开源库和闭源库，其中.a就是闭源库（无法看到具体实现方法），而Github上的代码基本都是开源库。静态库执行时会被复制到可执行文件中，多次调用则会出现冗余拷贝，不建议使用静态库。可以使用动态库.dylib(动态库貌似通不过appstore审核)或者源码。 生成.a文件一个.a文件，要想兼容各种不同的cpu架构，需要包含各种指令集(amrv7/armv7s/arm64">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-02-24T07:39:06.000Z">
+<meta property="og:updated_time" content="2018-09-10T09:42:03.290Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="IOS生成静态库.a文件">
 <meta name="twitter:description" content="说明库是程序代码的合集，常见的有开源库和闭源库，其中.a就是闭源库（无法看到具体实现方法），而Github上的代码基本都是开源库。静态库执行时会被复制到可执行文件中，多次调用则会出现冗余拷贝，不建议使用静态库。可以使用动态库.dylib(动态库貌似通不过appstore审核)或者源码。 生成.a文件一个.a文件，要想兼容各种不同的cpu架构，需要包含各种指令集(amrv7/armv7s/arm64">
@@ -391,7 +391,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2017-02-24 15:39:06" itemprop="dateModified" datetime="2017-02-24T15:39:06+08:00">2017-02-24</time>
+                <time title="修改时间：2018-09-10 17:42:03" itemprop="dateModified" datetime="2018-09-10T17:42:03+08:00">2018-09-10</time>
               
             
           </span>
@@ -461,12 +461,12 @@
 <li>在StaticDemo目录下分别创建3个类<code>TestPublicClass/TestObj1/TestObj2</code>，其中<code>TestPublicClass.h</code>准备对外公开。</li>
 <li>随便选择一个模拟器(如iphoen6)，<code>Command+B</code>编译完成后就会生成.a文件，该文件是用于模拟器的（Release版本可以不合并），然后选择<code>Generic IOS Device</code>，再次编译完成，会生成.a文件，该文件是用于真机的。 他们的路径可以右键.a文件在Finder中查看。</li>
 <li><p>查看.a文件支持的arm指令集，使用<code>lipo -inof *.a</code>,如:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">lipo -info libGenerateStaticLib.a </span><br><span class="line">Architectures in the fat file: libGenerateStaticLib.a are: armv7 arm64</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">lipo -info libGenerateStaticLib.a</span><br><span class="line">Architectures in the fat file: libGenerateStaticLib.a are: armv7 arm64</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>合并不同架构的.a文件，使用命令<code>lipoi -create source1.a source2.a -output dest.a</code>，如：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lipo -create Debug-iphoneos/libGenerateStaticLib.a Debug-iphonesimulator/libGenerateStaticLib.a -output libGS.a</span><br></pre></td></tr></table></figure>
 <p> 合并后，可以通过<code>lipo -info *.a</code>确认</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">lipo -info libGS.a </span><br><span class="line">Architectures in the fat file: libGS.a are: armv7 x86_64 arm64</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">lipo -info libGS.a</span><br><span class="line">Architectures in the fat file: libGS.a are: armv7 x86_64 arm64</span><br></pre></td></tr></table></figure>
 <p> 可以看到.a已经合并成功。接着将头文件<code>TestPublicClass.h</code>复制出来，.a文件打包就大功告成了。</p>
 <h1 id="iphone设备arm架构表"><a href="#iphone设备arm架构表" class="headerlink" title="iphone设备arm架构表"></a>iphone设备arm架构表</h1><p><a href="https://www.innerfence.com/howto/apple-ios-devices-dates-versions-instruction-sets" target="_blank" rel="noopener">参考链接</a></p>
 </li>
@@ -543,7 +543,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/IOS/" rel="tag"># IOS</a>
+            <a href="/tags/iOS/" rel="tag"># iOS</a>
           
         </div>
       
@@ -647,7 +647,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">27</span>
+                    <span class="site-state-item-count">28</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -686,7 +686,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">13</span>
+                      
+                    
+                    <span class="site-state-item-count">14</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -755,9 +757,7 @@
                     
                       
                     
-                      
-                    
-                    <span class="site-state-item-count">29</span>
+                    <span class="site-state-item-count">28</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
