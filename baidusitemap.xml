@@ -4,19 +4,19 @@
 
     
   <url>
-    <loc>http://zyoung.me/%E5%8D%87%E7%BA%A7Hexo%E5%92%8CNext/</loc>
-    <lastmod>2018-09-10T10:34:13.103Z</lastmod>
+    <loc>http://zyoung.me/ios%E8%AE%BE%E5%A4%87%E4%BF%A1%E6%81%AF/</loc>
+    <lastmod>2018-09-11T09:43:57.354Z</lastmod>
     <data>
         <display>
-        <title>升级Hexo和Next</title>
-        <pubTime>2018-09-10T09:40:57.000Z</pubTime>
+        <title>ios设备信息</title>
+        <pubTime>2016-06-07T09:46:09.000Z</pubTime>
         
-        <tag>升级</tag>
+        <tag>iOS</tag>
          
          
            
              
-              <breadCrumb title="维护" url="http://zyoung.me/categories/%E7%BB%B4%E6%8A%A4/"/>
+              <breadCrumb title="Apple" url="http://zyoung.me/categories/Apple/"/>
           
         </display>
     </data>
@@ -25,7 +25,7 @@
     
   <url>
     <loc>http://zyoung.me/%E8%B0%88%E8%B0%88MVC%E5%92%8CMVVM/</loc>
-    <lastmod>2018-09-10T09:44:29.452Z</lastmod>
+    <lastmod>2018-09-11T09:42:55.581Z</lastmod>
     <data>
         <display>
         <title>谈谈MVC和MVVM</title>
@@ -39,6 +39,46 @@
            
              
               <breadCrumb title="设计模式" url="http://zyoung.me/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zyoung.me/app%E6%8F%90%E4%BA%A4appstore%E7%9A%84%E7%AE%80%E4%BB%8B/</loc>
+    <lastmod>2018-09-11T09:42:39.946Z</lastmod>
+    <data>
+        <display>
+        <title>app提交apptore的简介</title>
+        <pubTime>2016-04-26T02:38:17.000Z</pubTime>
+        
+        <tag>iOS</tag>
+         
+         
+           
+             
+              <breadCrumb title="Apple" url="http://zyoung.me/categories/Apple/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zyoung.me/%E5%8D%87%E7%BA%A7Hexo%E5%92%8CNext/</loc>
+    <lastmod>2018-09-10T10:34:13.103Z</lastmod>
+    <data>
+        <display>
+        <title>升级Hexo和Next</title>
+        <pubTime>2018-09-10T09:40:57.000Z</pubTime>
+        
+        <tag>升级</tag>
+         
+         
+           
+             
+              <breadCrumb title="维护" url="http://zyoung.me/categories/%E7%BB%B4%E6%8A%A4/"/>
           
         </display>
     </data>
@@ -98,46 +138,6 @@
         <tag>iOS</tag>
          
         <tag>WWDC</tag>
-         
-         
-           
-             
-              <breadCrumb title="Apple" url="http://zyoung.me/categories/Apple/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://zyoung.me/ios%E8%AE%BE%E5%A4%87%E4%BF%A1%E6%81%AF/</loc>
-    <lastmod>2018-09-10T09:42:53.536Z</lastmod>
-    <data>
-        <display>
-        <title>ios设备信息</title>
-        <pubTime>2016-06-07T09:46:09.000Z</pubTime>
-        
-        <tag>iOS设备</tag>
-         
-         
-           
-             
-              <breadCrumb title="Apple" url="http://zyoung.me/categories/Apple/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://zyoung.me/app%E6%8F%90%E4%BA%A4appstore%E7%9A%84%E7%AE%80%E4%BB%8B/</loc>
-    <lastmod>2018-09-10T09:42:36.791Z</lastmod>
-    <data>
-        <display>
-        <title>app提交appstore的简介</title>
-        <pubTime>2016-04-26T02:38:17.000Z</pubTime>
-        
-        <tag>iOS</tag>
          
          
            
@@ -402,19 +402,19 @@
 
     
   <url>
-    <loc>http://zyoung.me/2017%E6%96%B0%E7%9A%84%E8%B5%B7%E7%82%B9/</loc>
+    <loc>http://zyoung.me/git%E4%BB%93%E5%BA%93%E8%BF%81%E7%A7%BB/</loc>
     <lastmod>2017-02-24T07:39:06.000Z</lastmod>
     <data>
         <display>
-        <title>2017新的起点</title>
-        <pubTime>2017-02-08T06:57:19.000Z</pubTime>
+        <title>git仓库迁移</title>
+        <pubTime>2016-04-28T03:54:58.000Z</pubTime>
         
-        <tag>杂记</tag>
+        <tag>git</tag>
          
          
            
              
-              <breadCrumb title="随笔" url="http://zyoung.me/categories/%E9%9A%8F%E7%AC%94/"/>
+              <breadCrumb title="小技巧" url="http://zyoung.me/categories/%E5%B0%8F%E6%8A%80%E5%B7%A7/"/>
           
         </display>
     </data>
@@ -442,19 +442,19 @@
 
     
   <url>
-    <loc>http://zyoung.me/git%E4%BB%93%E5%BA%93%E8%BF%81%E7%A7%BB/</loc>
+    <loc>http://zyoung.me/2017%E6%96%B0%E7%9A%84%E8%B5%B7%E7%82%B9/</loc>
     <lastmod>2017-02-24T07:39:06.000Z</lastmod>
     <data>
         <display>
-        <title>git仓库迁移</title>
-        <pubTime>2016-04-28T03:54:58.000Z</pubTime>
+        <title>2017新的起点</title>
+        <pubTime>2017-02-08T06:57:19.000Z</pubTime>
         
-        <tag>git</tag>
+        <tag>杂记</tag>
          
          
            
              
-              <breadCrumb title="小技巧" url="http://zyoung.me/categories/%E5%B0%8F%E6%8A%80%E5%B7%A7/"/>
+              <breadCrumb title="随笔" url="http://zyoung.me/categories/%E9%9A%8F%E7%AC%94/"/>
           
         </display>
     </data>
@@ -482,26 +482,6 @@
 
     
   <url>
-    <loc>http://zyoung.me/git%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/</loc>
-    <lastmod>2017-02-24T07:39:06.000Z</lastmod>
-    <data>
-        <display>
-        <title>git使用方法</title>
-        <pubTime>2016-04-26T03:10:37.000Z</pubTime>
-        
-        <tag>git</tag>
-         
-         
-           
-             
-              <breadCrumb title="版本管理工具" url="http://zyoung.me/categories/%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://zyoung.me/mac%E7%94%B5%E8%84%91%E9%9A%90%E8%97%8F%E6%96%87%E4%BB%B6%E7%9A%84%E6%96%B9%E6%B3%95/</loc>
     <lastmod>2017-02-24T07:39:06.000Z</lastmod>
     <data>
@@ -515,6 +495,26 @@
            
              
               <breadCrumb title="小技巧" url="http://zyoung.me/categories/%E5%B0%8F%E6%8A%80%E5%B7%A7/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zyoung.me/git%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/</loc>
+    <lastmod>2017-02-24T07:39:06.000Z</lastmod>
+    <data>
+        <display>
+        <title>git使用方法</title>
+        <pubTime>2016-04-26T03:10:37.000Z</pubTime>
+        
+        <tag>git</tag>
+         
+         
+           
+             
+              <breadCrumb title="版本管理工具" url="http://zyoung.me/categories/%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/"/>
           
         </display>
     </data>

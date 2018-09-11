@@ -76,7 +76,7 @@
   <entry>
     <title><![CDATA[谈谈MVC和MVVM]]></title>
     <url>%2F%E8%B0%88%E8%B0%88MVC%E5%92%8CMVVM%2F</url>
-    <content type="text"><![CDATA[在IOS开发的过程中，你肯定听说过MVC下面记录下个人对这种设计模式的理解，顺便谈谈衍生的MVVM设计模式。 前言不管采用哪种设计模式，都是为了程序结构更清晰，便于后续扩展、复用，从某方面来说，程序员的最大敌人就是需求的不断更新和增加，而我们要做的就是：以不变应万变。这就需要相应的设计模式了，否则，我们的程序只会越来越庞大，到处都是冗余代码，无法维护和扩展，最终谁也拿它没辙。 换句话说，编码的原则是DRYDon&#39;t repeat yourself，如果你发现项目里有很多重复/类似的代码、某个类特别庞大、改需求特别痛苦、新项目完全从零起步，那我们就必须思考问题出在哪，并用相应的设计模式来重构代码，避免发生上述的状况 Model-View-Controller Model模型层，封装数据结构和相应的逻辑操作等。不能和视图层有直接的通信。用户在视图层的操作，通过控制层更新相应的模型层，然后通知控制层更新视图层界面。 View视图层是展现给用户看的，知道怎样布局，响应用户的操作。通常视图层需要和模型层解耦。模型层的改变，通过控制层来更新视图层的显示。 Controller控制层协调单个或多个模型和视图的关联，分配任务及管理app的生命周期等。 MVC模式里，Model、View和Controller相互独立，互不影响。通常为了实现需求，而没有将Controller进行拆分，导致Controller控制的状态过多，后期很难维护。需要将协调视图View和模型Model无关的代码抽出去，比如网络请求、数据库的读写等可以放到单独的模型Model里，Controller只需接受Model的更改并通知视图View更新即可。不同层不要相互引用，降低耦合。如：Model层不要直接引用View层，最好只引用同类别的Model MVC在IOS开发中的不足开发的过程中，由于Controller和View的紧耦合，导致MVC的三部分拆分并不完全独立，以及单元测试难以覆盖等问题。 Model-View-ViewModel 对比MVC，可以发现他们很相似，视图View和数据Model并没有直接通信，都要通过中间控制器协调（Controller或ViewModel）。那么在IOS开发中，ViewController和View都被划分到MVVM的视图层，Model还是模型层，ViewModel能主动调用Model的api对Model进行更改，也能在Model更改时对自身进行更新，然后通过View和ViewModel之间的绑定，对View进行更新。 View和ViewModel的绑定，常见的有两种方法 KVO 如Bond 函数式响应编程 如ReactiveCocoa]]></content>
+    <content type="text"><![CDATA[在iOS开发的过程中，你肯定听说过MVC下面记录下个人对这种设计模式的理解，顺便谈谈衍生的MVVM设计模式。 前言不管采用哪种设计模式，都是为了程序结构更清晰，便于后续扩展、复用，从某方面来说，程序员的最大敌人就是需求的不断更新和增加，而我们要做的就是：以不变应万变。这就需要相应的设计模式了，否则，我们的程序只会越来越庞大，到处都是冗余代码，无法维护和扩展，最终谁也拿它没辙。 换句话说，编码的原则是DRYDon&#39;t repeat yourself，如果你发现项目里有很多重复/类似的代码、某个类特别庞大、改需求特别痛苦、新项目完全从零起步，那我们就必须思考问题出在哪，并用相应的设计模式来重构代码，避免发生上述的状况 Model-View-Controller Model模型层，封装数据结构和相应的逻辑操作等。不能和视图层有直接的通信。用户在视图层的操作，通过控制层更新相应的模型层，然后通知控制层更新视图层界面。 View视图层是展现给用户看的，知道怎样布局，响应用户的操作。通常视图层需要和模型层解耦。模型层的改变，通过控制层来更新视图层的显示。 Controller控制层协调单个或多个模型和视图的关联，分配任务及管理app的生命周期等。 MVC模式里，Model、View和Controller相互独立，互不影响。通常为了实现需求，而没有将Controller进行拆分，导致Controller控制的状态过多，后期很难维护。需要将协调视图View和模型Model无关的代码抽出去，比如网络请求、数据库的读写等可以放到单独的模型Model里，Controller只需接受Model的更改并通知视图View更新即可。不同层不要相互引用，降低耦合。如：Model层不要直接引用View层，最好只引用同类别的Model MVC在IOS开发中的不足开发的过程中，由于Controller和View的紧耦合，导致MVC的三部分拆分并不完全独立，以及单元测试难以覆盖等问题。 Model-View-ViewModel 对比MVC，可以发现他们很相似，视图View和数据Model并没有直接通信，都要通过中间控制器协调（Controller或ViewModel）。那么在IOS开发中，ViewController和View都被划分到MVVM的视图层，Model还是模型层，ViewModel能主动调用Model的api对Model进行更改，也能在Model更改时对自身进行更新，然后通过View和ViewModel之间的绑定，对View进行更新。 View和ViewModel的绑定，常见的有两种方法 KVO 如Bond 函数式响应编程 如ReactiveCocoa]]></content>
       <categories>
         <category>设计模式</category>
       </categories>
@@ -160,7 +160,7 @@
         <category>Apple</category>
       </categories>
       <tags>
-        <tag>iOS设备</tag>
+        <tag>iOS</tag>
       </tags>
   </entry>
   <entry>
@@ -263,7 +263,7 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[app提交appstore的简介]]></title>
+    <title><![CDATA[app提交apptore的简介]]></title>
     <url>%2Fapp%E6%8F%90%E4%BA%A4appstore%E7%9A%84%E7%AE%80%E4%BB%8B%2F</url>
     <content type="text"><![CDATA[申请开发者账号 登陆苹果官网Apple Develper,注册开发者账号 生成certificate证书(用系统的keychain生成.CSR文件，该文件最好长期保存，后续加入新app或者证书过期需重新生成时都需要该文件，这样服务器就不用更新推送证书了，而且兼容之前老证书发的包)，生成对应的证书打包提交AppStore。（个人开发者账号打的包提交appstore，企业开发者账号打的是Inhouse证书的包，无需通过appstore，可以直接通过fir等分发就行） 登陆Itunes Connect,创建App Itunes Connect注意事项 AppIcon,尺寸1024*1024px,包括Ipad和Iphone Screenshots,app截图，最多5张，以竖屏为例子 Iphone4/4s: 640*960px Iphone5/5s: 640*1136px Iphone6: 750*1334px Iphone6 plus: 1242*2208px Ipad: 1536*2048px 基本信息 app的描述 关键字，多个关键字逗号隔开，用于appStore搜索 技术支持网站 推广网站 可选 隐私声明网站 可选 app的类别，如教育-工具 年龄评级，勾选相关项，系统会自动计算 设置价格 根据实际产品，选择性设置In-AppPurchase、Game Center、Newsstand等 可选 发布的市场。默认全球appStore上线，如果要求在特定区域的市场上线，需要提交.geojson格式的文件 可选 发布方式。默认是审核通过就发布到appStore，也可以选择手动发布 版权信息 版权所有，如“2015 Acme Inc” 负责人姓名、手机、邮箱 审核 审核时遇到问题时的联系人：姓名、手机、邮箱 审核时的测试账号(长期有效，最高权限) 审核时的注意事项和备注 将通过测试验收的工程，Xcode等工具打包并添加相应的证书，提交appStore 确认符合苹果审核要求 进入Itunes Connect，确认信息完整后，点击右上角的提交审核按钮]]></content>
       <categories>
